@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/162dba6519.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/13f391ae93.js" crossorigin="anonymous"></script>
+   
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="register">
+        <div class="reg-data">
+            <div class="title">Register</div>
+            <div class="reg">
+                <form action="#">
+                    <div class="reg-input-box">
+                        <input type="text" placeholder="User Name" required >
+                        <div class="icon"> <i class="fa-solid fa-user-plus"></i></div>
+                    </div>
+                    <div class="reg-input-box">
+                        <input type="text" placeholder="Full Name" required >
+                        <div class="icon"> <i class="fas fa-user "></i></div>
+                    </div>
+                    <div class="reg-input-box">
+                        <input type="email" placeholder="Email or Phone" required >
+                        <div class="icon"> <i class="fa-solid fa-envelope"></i></div>
+                    </div>
+                    <div class="reg-input-box">
+                        <input type="password" placeholder="Password" required >
+                        <div class="icon"> <i class="fas fa-lock"></i></div>
+                    </div>
+                    <div class="reg-input-box">
+                        <input type="password" placeholder="Re-type Password" >
+                        <div class="icon"> <i class="fas fa-lock"></i></div>
+                    </div>
+                    <div class="option_div">
+                            <div class="check_box">
+                                <input type="checkbox" required>
+                                <span>I agree with terms and condition</span>
+                            </div>
+                    </div>
+                    <div class="reg-input-box  button">
+                        <input type="submit" value="Register" >
+                    </div>
+                    <div class="reg-logIn">
+                        <a href="#">Login now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- here login page -->
+
+    <div class="login">
+        <div class="closeLogin">x</div>
+        <div class="login-form">
+            <div class="title">Login</div>
+            
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Email or Phone" name="lname">
+                    <div class="icon"> <i class="fas fa-user "></i></div>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Password" name="lpass" >
+                    <div class="icon"> <i class="fas fa-lock"></i></div>
+                </div>
+                
+                <div class="option_div">
+                        <div class="check_box">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </div>
+                        <div class="forget_div">
+                            <a href="#">Forget Password</a>
+                        </div>
+                    
+                </div>
+                <div class="input-box  button">
+                    <input type="submit" value="Login" >
+                </div>
+                <div class="sign_up">
+                    Not member <a href="#">Signup now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
