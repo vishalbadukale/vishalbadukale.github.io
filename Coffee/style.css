@@ -1,0 +1,389 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+.fa-mug-hot {
+	color: maroon;
+	text-shadow: 0px 0px 10px black;
+}
+.navbar span {
+	text-shadow: 1px 1px 3px black;
+	font-size: 25px;
+	color: chocolate;
+	font-weight: bold;
+}
+
+/* burger menu animation */
+.navbar-toggler {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	transition: 0.5s ease-in-out;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.toggler-icon:focus {
+	outline: none;
+	box-shadow: none;
+	border: 0;
+}
+
+.toggler-icon {
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background: white;
+	border-radius: 1px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: 0.25s ease-in-out;
+}
+.middle-bar {
+	margin-top: 0px;
+}
+.navbar-toggler .top-bar {
+	margin-top: 0px;
+	transform: rotate(135deg);
+}
+.navbar-toggler .middle-bar {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.navbar-toggler .bottom-bar {
+	margin-top: 0px;
+	transform: rotate(-135deg);
+}
+.navbar-toggler.collapsed .top-bar {
+	margin-top: -20px;
+	transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .middle-bar {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+	margin-top: 20px;
+	transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .toggler-icon {
+	/* background: linear-gradient(263deg,rgba(252,74,74,1) 0%,rgba(0,212,255,1) 100%); */
+	background: white;
+}
+.btn-close:focus,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+	box-shadow: none;
+}
+
+.btn-close:hover {
+	transform: rotate(360deg) scale(1);
+	transition: all 0.9s;
+	color: greenyellow;
+}
+.fa-xmark,.btn-close {
+	cursor: pointer;
+}
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 355px;
+	}
+}
+
+.modal-footer {
+	border-top: none;
+}
+
+.bg-image {
+	background-image: url("./Image/mike-kenneally-tNALoIZhqVM-unsplash.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 660px;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.bg-image h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.bg-image h2 {
+	font-size: 80px;
+	font-weight: bold;
+	width: 100%;
+}
+
+.bg-image h2:nth-child(2) {
+	color: maroon;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			15% 44%,
+			32% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			16% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+.content p {
+	font-size: 30px;
+	color: #e1e105;
+}
+
+.content {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.bg-image {
+	}
+	.bg-image p {
+		font-size: 15px;
+		top: 50%;
+	}
+	.content {
+		top: 50%;
+		left: 20%;
+	}
+	.bg-image h1 {
+		font-size: 35px;
+	}
+
+	.overlay-content {
+		padding: 5px 15px;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	.overlay-content p {
+		font-size: 12px;
+		line-height: 0px;
+		padding-top: 5px;
+	}
+}
+
+.card-show:hover {
+	box-shadow: 0px 1px 6px black, 0px 1px 6px #420202;
+}
+
+.card img {
+	width: 100%;
+	height: 220px;
+}
+.fa-caret-down {
+	cursor: pointer;
+}
+.cImg {
+	display: none;
+}
+#menu {
+	/* background: url("./Image/kisspng-bonbon-stuffing-chocolate-milk-food-chocolate-sauce-5a94875aee9108.2654699315196834189772.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
+.menu,
+.contact,
+.about,
+.location {
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.card-show {
+	overflow: hidden;
+}
+
+#about {
+	background: rgb(246, 244, 244);
+}
+.carousel-item img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 1px 6px black;
+}
+
+/* see here overly on carousel */
+.main {
+	position: relative;
+}
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 246, 246, 0.5);
+	overflow: hidden;
+	height: 0;
+	margin: 10px;
+	margin-bottom: 0;
+	border-radius: 5px;
+	transition: 0.5s ease;
+}
+.main:hover .overlay {
+	height: 100%;
+}
+.overlay-content {
+	color: black;
+	position: absolute;
+	padding: 10px 40px;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.overlay-content p {
+	line-height: 10px;
+}
+
+.location {
+	background: url("./Image/chocolate.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.ph-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid rgb(255, 89, 0);
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	color: rgb(255, 89, 0);
+}
+.contact {
+	background: url("./Image/kisspng-bonbon-stuffing-chocolate-milk-food-chocolate-sauce-5a94875aee9108.2654699315196834189772.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.contact-form h2 {
+	color: springgreen;
+	text-shadow: 0px 1px 0px black;
+}
+.c-names {
+	color: rgb(255, 89, 0);
+	text-shadow: 0px 1px 0px black;
+}
+
+.span-or {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -2px;
+	margin-left: -25px;
+	background-color: #fff;
+	width: 50px;
+	text-align: center;
+}
+
+footer.nb-footer {
+	background: #222;
+	border-top: 4px solid #b78c33;
+}
+footer.nb-footer .about-t {
+	margin: 0 auto;
+	margin-top: 40px;
+	max-width: 1170px;
+	text-align: center;
+}
+footer.nb-footer .about-t p {
+	font-size: 13px;
+	color: #999;
+	margin-top: 30px;
+}
+footer.nb-footer .about-t .social-media {
+	margin-top: 15px;
+}
+footer.nb-footer .about-t .social-media ul li a {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 16px;
+	color: #b78c33;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer.nb-footer .about-t .social-media ul li a:hover {
+	background: #b78c33;
+	color: #fff;
+	border-color: #b78c33;
+}
+footer.nb-footer .footer-info-single {
+	margin-top: 30px;
+}
+footer.nb-footer .footer-info-single .title {
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 16px;
+	border-left: 4px solid #b78c33;
+	padding-left: 5px;
+}
+footer.nb-footer .footer-info-single ul li a {
+	display: block;
+	color: #aaa;
+	padding: 2px 0;
+}
+footer.nb-footer .footer-info-single ul li a:hover {
+	color: #b78c33;
+}
+footer.nb-footer .footer-info-single p {
+	font-size: 13px;
+	line-height: 20px;
+	color: #aaa;
+}
+footer.nb-footer .copyright {
+	margin-top: 15px;
+	background: #111;
+	padding: 7px 0;
+	color: #999;
+}
+footer.nb-footer .copyright p {
+	margin: 0;
+	padding: 0;
+}
