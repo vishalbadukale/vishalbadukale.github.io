@@ -85,9 +85,10 @@ html {
 }
 
 .btn-close:hover {
+	color: greenyellow;
 	transform: rotate(360deg) scale(1);
 	transition: all 0.9s;
-	color: greenyellow;
+	
 }
 .fa-xmark,.btn-close {
 	cursor: pointer;
@@ -130,6 +131,8 @@ html {
 	animation: animate 4s ease-in-out infinite;
 }
 
+
+
 @keyframes animate {
 	0%,
 	100% {
@@ -160,6 +163,9 @@ html {
 	}
 }
 
+.location .col-md-6{
+	padding: 1rem;
+}
 .content p {
 	font-size: 30px;
 	color: #e1e105;
@@ -172,36 +178,25 @@ html {
 	transform: translate(-50%, -50%);
 	width: 100%;
 }
-
-@media only screen and (max-width: 600px) {
-	.bg-image {
-	}
-	.bg-image p {
-		font-size: 15px;
-		top: 50%;
-	}
-	.content {
-		top: 50%;
-		left: 20%;
-	}
-	.bg-image h1 {
-		font-size: 35px;
-	}
-
-	.overlay-content {
-		padding: 5px 15px;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
-	.overlay-content p {
-		font-size: 12px;
-		line-height: 0px;
-		padding-top: 5px;
-	}
+.menu .card-text{
+	padding-top: 10px;
 }
+.menu .card-text .btn-outline-success{
+border-color: #19cf7a;
+color: #19cf7a;
+}
+.menu .card-text .btn-outline-success:hover
+{
+	background-color:  #19cf7a;
+	color: white;
+}
+.menu .card-text .btn-sm{
+	width: 30%;
+    height: 25px;
+    line-height: 0;
+    font-size: 12px;
+}
+
 
 .card-show:hover {
 	box-shadow: 0px 1px 6px black, 0px 1px 6px #420202;
@@ -264,6 +259,7 @@ html {
 .main:hover .overlay {
 	height: 100%;
 }
+
 .overlay-content {
 	color: black;
 	position: absolute;
@@ -277,6 +273,10 @@ html {
 }
 .overlay-content p {
 	line-height: 10px;
+}
+.b-button button{
+	padding: 0 3rem;
+
 }
 
 .location {
@@ -305,10 +305,88 @@ html {
 	color: springgreen;
 	text-shadow: 0px 1px 0px black;
 }
+.contact .card .row .col-md-2{
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	margin-left: 1.5rem;	
+
+}
 .c-names {
 	color: rgb(255, 89, 0);
 	text-shadow: 0px 1px 0px black;
 }
+@media (max-width: 480px) {
+	.bg-image {
+		height: 520px;
+		background-position: unset;
+	}
+
+	.bg-image h2{
+		top: 54%;
+		transform: translate(-50%, -50%);
+		font-size: 50px;
+	}
+	.content {
+
+	}
+	.content p{
+		top: 80%;
+		transform: translate(30%, -100%);
+	}
+	.about .carousel-item .col-md-4
+	{
+		width: 100%;
+		height: 100px;
+	}
+	.location .col-md-6{
+		padding: 0;
+	}
+	.location .col-md-6 img {
+width: 100%;
+	}
+	.contact .card .row .col-md-2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 0;
+	}
+
+
+
+	}
+@media (min-width: 481px) and (max-width: 575px) {}
+@media only screen and (max-width: 600px) {
+	.bg-image {
+	}
+	.bg-image p {
+		font-size: 15px;
+		top: 50%;
+	}
+	.content {
+		top: 50%;
+		left: 20%;
+	}
+	.bg-image h1 {
+		font-size: 35px;
+	}
+
+	.overlay-content {
+		/* padding: 5px 15px;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%); */
+	}
+	.overlay-content p {
+		font-size: 12px;
+		line-height: 0px;
+		padding-top: 5px;
+	}
+}
+
+
 
 .span-or {
 	display: block;
