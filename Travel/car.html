@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hotel</title>
+		<!-- fontawsome icon links -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/162dba6519.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://kit.fontawesome.com/13f391ae93.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- bootStrap links -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
+		<!-- Style CSS link -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-collapse navbar-expand-lg navbar-dark fixed-top">
+			<div class="container">
+				<a href="" class="navbar-brand fs-3">
+					<span>I</span><span>G</span><span>O</span>
+				</a>
+				<button
+					type="button"
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center bg-transparent"
+					id="mynav"
+				>
+					<div class="navbar-nav ms-auto">
+						<a href="index.html" class="nav-item nav-link fs-5">Flight</a>
+						<a href="car.html" class="nav-item nav-link active fs-5">Car</a>
+						<a href="hotel.html" class="nav-item nav-link fs-5">Hotel</a>
+						<a href="tripfind.html" class="nav-item nav-link fs-5"
+							>Trip Finder</a
+						>
+						<a href="#inspi" class="nav-item nav-link fs-5">Inspiration</a>
+						
+					<a class="nav-item nav-link fs-5" aria-current="page"
+					href="#"
+					data-bs-toggle="modal"
+					data-bs-target="#loginToggle">Login</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section id="car" class="car">
+			<div class="flight-g">
+				<div class="container">
+					<div class="car-content">
+						<div class="row">
+							<div class="flight-txt pb-5 flight-search-content">
+								<p class="text-capitalize">
+									The cheapest rental cars and cabs. . .
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="flight-search pr-0 pb-2 col-md-12">
+						<div class="row">
+							<div class="col-md-10">
+								<div class="flight-icon pl-0 d-flex">
+									<div class="f-icons">
+										<a class="flight-link" href="index.html"
+											><i class="fa-solid fa-plane-departure shadow"></i
+											>Fights</a
+										>
+									</div>
+									<div class="f-icons" style="background: red">
+										<a class="flight-link" href="car.html"
+											><i class="fa-solid fa-car shadow"></i>Cars</a
+										>
+									</div>
+									<div class="f-icons">
+										<a class="flight-link" href="hotel.html"
+											><i class="fa-solid fa-bed shadow"></i>Hotel</a
+										>
+									</div>
+								</div>
+								<div class="flight-search-content">
+									<div class="flight-form pt-3">
+										<div class="row">
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Current Location"
+													name="cloc"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Destination City or Area"
+													name="darea"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="date"
+													name="cardate"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<select
+													id="my-select"
+													class="form-control"
+													name="carPass"
+												>
+													<option>Passenger</option>
+													<option>1 Passenger</option>
+													<option>2 Passenger</option>
+													<option>3 Passenger</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flight-ticket">
+									<div class="row">
+										<div class="form-group col-md-3 col-sm-6">
+											<input
+												id="my-input"
+												class="form-control"
+												type="text"
+												placeholder="Uber Cab"
+												name="uber"
+											/>
+										</div>
+										<div class="form-group col-md-3 col-sm-6">
+											<input
+												id="my-input"
+												class="form-control"
+												type="text"
+												placeholder="Ola Cab"
+												name="ola"
+											/>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="ac"
+													name="ac"
+												/>
+												<label class="form-check-label text-white" for="ac">
+													AC or No-Ac
+												</label>
+											</div>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="nearbyCar"
+													name="nearbyCar"
+												/>
+												<label
+													class="form-check-label text-white"
+													for="nearbyCar"
+												>
+													<i
+														class="fa fa-location-dot pl-1 text-danger"
+														aria-hidden="true"
+													></i>
+													Nearby Car or Taxi
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="col-md-2 d-flex justify-content-center align-items-center"
+							>
+								<button type="button" class="btn btn-warning text-uppercase">
+									Search
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="refer">
+			<div class="refer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 mb-3 col-sm-6">
+							<div
+								class="card shadow mb-3"
+								style="max-width: 540px; padding: 10px"
+							>
+								<div class="row g-0">
+									<div class="col-md-4 text-center">
+										<img
+											src="./Images/refer.png"
+											class="img-fluid rounded-start img1"
+											alt="Check Image ...."
+										/>
+									</div>
+									<div class="col-md-8">
+										<div class="card-body">
+											<h5 class="card-title">REFER AND EARN</h5>
+											<p class="card-text">
+												You earn 1200 credits, and your friend gets 50% (up to
+												Rs. 2500) off on their first booking of at least 8
+												hours.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div
+								class="card shadow mb-3"
+								style="max-width: 540px; padding: 10px"
+							>
+								<div class="row g-0">
+									<div class="col-md-4 text-center">
+										<img
+											src="./Images/logincar.jpg"
+											class="img-fluid rounded-start img2"
+											alt="Check Image ...."
+										/>
+									</div>
+									<div class="col-md-8">
+										<div class="card-body card2">
+											<h5 class="card-title">LOGIN</h5>
+											<p class="card-text">
+												If you have an upcoming or a live booking, then log in
+												to view your booking.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="cDest">
+			<div class="cDest">
+				<div class="container">
+					<div class="cDest-title text-center">
+						<h1 class="pb-4 text-dark">POPULAR DESTINATIONS FOR CAR</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/613095.webp?k=8caf960d96a59e284ac1518ac8777e89d17fda6572acd84dbec151f627c7bf07&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$21</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/645955.webp?k=30591ab344ba6d1a248e74a1449741669276a638398138557d9f310b3c27c969&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">london</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$10</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/645577.webp?k=81d61cb4e120af4d4218386546a117b77ef18dfcf3727d186ec3a1aad60f38fe&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Paris</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$13</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/613095.webp?k=8caf960d96a59e284ac1518ac8777e89d17fda6572acd84dbec151f627c7bf07&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Madrid</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$9</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/613095.webp?k=8caf960d96a59e284ac1518ac8777e89d17fda6572acd84dbec151f627c7bf07&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$21</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/645955.webp?k=30591ab344ba6d1a248e74a1449741669276a638398138557d9f310b3c27c969&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">london</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$10</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/645577.webp?k=81d61cb4e120af4d4218386546a117b77ef18dfcf3727d186ec3a1aad60f38fe&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Paris</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$13</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="card mb-3 card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://cf.bstatic.com/xdata/images/city/360x240/971353.webp?k=a5b47d2c38469086427837dfe64ab2e6f57ba52f0504359ef4cc02dc4b9b0737&o="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Madrid</h5>
+									<p class="card-text text-center mb-1">
+										<span class="text-primary fw-bold">$9</span> per day
+									</p>
+									<p class="card-text text-center">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="review">
+			<div class="revie">
+				<div class="container">
+					<div class="row"></div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="nb-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about-t">
+							<div class="social-media">
+								<ul class="list-inline d-flex justify-content-center">
+									<li class="px-2">
+										<a href="http://www.facebook.com/"
+											><i class="fa fa-facebook" aria-hidden="true"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.twitter.com/"
+											><i class="fa fa-twitter"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.google.com/"
+											><i class="fa fa-google-plus"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.linkedin.com/"
+											><i class="fa fa-linkedin"></i
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Help Center</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> How to Pay</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> FAQ's</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Sitemap</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Delivery Info</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Customer information</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> About Us</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> FAQ's</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Sell Your Items</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Contact Us</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> RSS</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Security & privacy</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Terms Of Use</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Privacy Policy</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Return / Refund
+										Policy</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Store Locations</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Payment</h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="d-flex justify-content-center">
+							<p>Copyright © 2022. Your Company.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- showing Login Form  MOdel-->
+<div class="modal fade"
+id="loginToggle"
+aria-hidden="true"
+aria-labelledby="ModalToggleLabel"
+tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-content">
+		<div class="d-flex justify-content-end">
+			<button type="button" class="btn-close btn-animation float-end pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+			
+		</div>
+		<h5 class="modal-title text-center fs-3 pt-0" id="ModalToggleLabel">
+			Login
+		</h5>
+
+		<div class="modal-body">
+			<form action="" method="post">
+				<div class="form-floating mb-3">
+					<input
+						type="text"
+						class="form-control"
+						id="floatingInput"
+						name="uname"
+						placeholder="name@example.com"
+					/>
+					<label for="floatingInput">User Name</label>
+				</div>
+				<div class="form-floating mb-3">
+					<input
+						type="password"
+						class="form-control"
+						name="pass"
+						id="floatingPassword"
+						placeholder="Password"
+					/>
+					<label for="floatingPassword">Password</label>
+				</div>
+				<div class="form-floating mb-3 d-flex justify-content-between">
+					
+						<div class="col-7">
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="inlineFormCheck"
+								/>
+								<label class="form-check-label" for="inlineFormCheck">
+									Remember me
+								</label>
+							</div>
+						</div>
+						<div class="forgetpass">
+							<a href="" class="text-decoration-none"> Forget Password</a>
+						</div>
+				</div>
+				<div class="form-floating text-center" >
+					<button type="submit" class="btn btn-block btn-success fs-5" style="height: 50px;">
+						Login
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="modal-footer justify-content-center">
+			Not a member
+			<a
+				class="text-decoration-none"
+				href=""
+				data-bs-target="#exampleModalToggle2"
+				data-bs-toggle="modal"
+				data-bs-dismiss="modal"
+				>Register</a
+			>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- getting next register form model -->
+
+<div class="modal fade"
+id="exampleModalToggle2"
+aria-hidden="true"
+aria-labelledby="exampleModalToggleLabel2"
+tabindex="-1"
+>
+<div class="modal-dialog modal-dialog-centered" style="width: 420px;">
+	<div class="modal-content">
+		<div class="d-flex justify-content-end">
+			<button type="button" class="btn-close float-end btn-animation pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+			
+		</div>
+		<div class="heading text-center">
+			<h5
+				class="modal-title text-uppercase fs-3"
+				id="exampleModalToggleLabel2"
+			>
+				Register
+			</h5>
+		</div>
+		<div class="modal-body">
+			<form class="row g-3" action="" method="post">
+				<div class="col-md-6">
+					<label for="fname" class="form-label">First Name</label>
+					<input type="text" class="form-control" name="" id="fname" />
+				</div>
+				<div class="col-md-6">
+					<label for="lname" class="form-label">Last Name</label>
+					<input type="text" class="form-control" name="" id="lname" />
+				</div>
+				<div class="col-md-12">
+					<label for="inputEmail4" class="form-label">Email</label>
+					<input type="text" class="form-control" id="inputEmail4" />
+				</div>
+				<div class="col-md-12">
+					<label for="inputPassword4" class="form-label">Password</label>
+					<input
+						type="password"
+						class="form-control"
+						id="inputPassword4"
+					/>
+				</div>
+				<div class="col-md-3">
+					
+					<label>
+					  Gender
+					</label>
+				</div>
+				<div class="form-check col-md-3">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+					<label class="form-check-label" for="flexRadioDefault1">
+					  Male
+					</label>
+				  </div>
+				  <div class="form-check col-md-3">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+					<label class="form-check-label" for="flexRadioDefault1">
+					  Female
+					</label>
+				  </div>
+				  <div class="form-check col-md-3">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+					<label class="form-check-label" for="flexRadioDefault1">
+					  Other
+					</label>
+				  </div>
+				
+				<div class="col-md-6">
+					<label for="inputCity" class="form-label">City</label>
+					<input type="text" class="form-control" id="inputCity" />
+				</div>
+				<div class="col-md-6">
+					<label for="inputState" class="form-label">State</label>
+					<select id="inputState" class="form-select">
+						<option selected>Choose...</option>
+						<option>Maharashtra</option>
+						<option>MP</option>
+						<option>UP</option>
+						<option>Bihar</option>
+					</select>
+				</div>
+				
+				<div class="col-12">
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							id="gridCheck"
+						/>
+						<label class="form-check-label" for="gridCheck">
+							I agree with terms and condition
+						</label>
+					</div>
+				</div>
+				<div class="form-floating text-center">
+					<button type="submit" class="btn btn-success w-50%">Sign in</button>
+				</div>
+				
+				</div>
+			</form>
+		</div>
+		
+		</div>
+	</div>
+</div>
+</div>
+
+		<script>
+			window.addEventListener("scroll", function () {
+				var nav = document.querySelector("nav");
+				nav.classList.toggle("sticky", window.scrollY > 200);
+			});
+		</script>
+	</body>
+</html>

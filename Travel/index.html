@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flight</title>
+		<!-- fontawsome icon links -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/162dba6519.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://kit.fontawesome.com/13f391ae93.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- bootStrap links -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
+		<!-- Style CSS link -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-collapse navbar-expand-lg navbar-dark fixed-top">
+			<div class="container">
+				<a href="" class="navbar-brand fs-3">
+					<span>I</span><span>G</span><span>O</span>
+				</a>
+				<button
+					type="button"
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-center bg-transparent" id="mynav">
+					<div class="navbar-nav ms-auto">
+						<a href="index.html" class="nav-item nav-link active fs-5">Flight</a>
+                    <a href="car.html" class="nav-item nav-link fs-5">Car</a>
+                    <a href="hotel.html" class="nav-item nav-link  fs-5">Hotel</a>
+                    <a href="tripfind.html" class="nav-item nav-link fs-5">Trip Finder</a>
+                    <a href="#inspi" class="nav-item nav-link fs-5">Inspiration</a>
+					<a class="nav-item nav-link fs-5" aria-current="page"
+								href="#"
+								data-bs-toggle="modal"
+								data-bs-target="#loginToggle">Login</a>
+                </div>
+				</div>
+			</div>
+		</nav>
+		<section id="flight" class="flight">
+			<div class="flight-g">
+				<div class="container">
+					<div class="flight-txt">
+						<p>" The best place to find the cheapest airfares "</p>
+						<p>-every single time</p>
+					</div>
+					<div class="flight-search pr-0 pb-2 col-md-12">
+						<div class="row">
+							<div class="col-md-10">
+								<div class="flight-icon pl-0 d-flex">
+									<div class="f-icons " style="background: red">
+										<a class="flight-link" href="index.html"><i class="fa-solid fa-plane-departure shadow"></i
+											>Fights</a
+										>
+									</div>
+									<div class="f-icons ">
+										<a class="flight-link" href="car.html"
+											><i class="fa-solid fa-car shadow"></i>Cars</a
+										>
+									</div>
+									<div class="f-icons ">
+										<a class="flight-link" href="hotel.html"
+											><i class="fa-solid fa-bed shadow"></i>Hotel</a
+										>
+									</div>
+									
+								</div>
+								<div class="flight-search-content">
+									<div class="flight-form pt-3">
+										<div class="row">
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Origin City"
+													name="ocity"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Destination City"
+													name="dcity"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="date"
+													name="date"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<select id="my-select" class="form-control" name="">
+													<option>Passenger</option>
+													<option>1 Passenger</option>
+													<option>2 Passenger</option>
+													<option>3 Passenger</option>
+													<option>4 Passenger</option>
+													<option>5 Passenger</option>
+													<option>6 Passenger</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flight-ticket">
+									<div class="row">
+										<div class="form-group col-md-3 col-sm-6">
+											<select class="form-select" id="selectTrip">
+												<option selected>Trip Type</option>
+												<option value="return">Return Ticket</option>
+												<option value="oneDay">One Day</option>
+												<option value="twoDay">Two Day</option>
+											</select>
+										</div>
+										<div class="form-group col-md-3 col-sm-6">
+											<select class="form-select" id="selectTrip">
+												<option selected>Ticket Class</option>
+												<option value="return">First Class</option>
+												<option value="oneDay">Business Class</option>
+												<option value="twoDay">Economy Class</option>
+											</select>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="directFlight"
+												/>
+												<label
+													class="form-check-label text-white"
+													for="directFlight"
+												>
+													Direct Flight Only
+												</label>
+											</div>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="nearbyAirport"
+												/>
+												<label
+													class="form-check-label text-white"
+													for="nearbyAirport"
+												>
+													Nearby Airports
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="col-md-2 d-flex justify-content-center align-items-center"
+							>
+								<button
+									type="button"
+									class="btn btn-warning text-uppercase"
+								>
+									Submit
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="fun">
+			<div class="fun pt-4 pb-5">
+				<div class="container">
+					<div class="fun-title text-center">
+						<h1 class="text-uppercase pb-4 text-white">Some Fun We Covered</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-biking fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">5670M</p>
+								<span class="text-white">Cyling Track</span>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-route fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">480M</p>
+								<span class="text-white">Distance Covered</span>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-holly-berry fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">5670M</p>
+								<span class="text-white">jungle distance</span>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-ship fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">180km</p>
+								<span class="text-white">Sailing distance</span>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-cloud-sun-rain fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">570day</p>
+								<span class="text-white">spend adventure</span>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class="fun-icon">
+								<i class="fas fa-hiking fa-3x text-white"></i>
+								<p class="mb-0 text-warning pt-1">5670M</p>
+								<span class="text-white">Atitude hike</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="sub">
+			<div class="sub">
+				<div class="container">
+					<div class="sub-content col-md-8">
+						<div class="row">
+							<div
+								class="sub-title col-md-12 col-sm-12 justify-content-center align-content-center"
+							>
+								<h2 class="text-white pb-3">SUBSCRIBE FOR OUR TRAVEL NEWSLETTERS</h2>
+								<p class="text-white">
+									Join our community of over 300,000 global readers who received
+									emails filled with news.promotions and other goods stuff from
+									G adventures.
+								</p>
+							</div>
+							<div
+								class="sub-form pt-2 col-md-12 col-sm-12 justify-content-center align-content-center"
+							>
+								<div class="d-flex">
+									<div class="form-group col-md-8 col-sm-10">
+										<input
+											id="email"
+											class="form-control"
+											type="text"
+											placeholder="Enter your email address....."
+											name="email"
+										/>
+									</div>
+									<div class="form-group col-md-4 col-sm-2">
+										<button type="button" class="btn btn-warning ">
+											Submit
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pDest">
+			<div class="pDest">
+				<div class="container">
+					<div class="pDest-title pb-3 text-center text-white">
+						<h1>POPULAR DESTINATIONS</h1>
+					</div>
+					<div class="row">
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/colosseum-in-rome-and-morning-sun-italy-picture-id539115110?b=1&k=20&m=539115110&s=170667a&w=0&h=qDI_pfFjh7Ug9xt_1k5du9D2tPmYYUarndPFU7nNCe4="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/casablanca-mosque-picture-id544676786?b=1&k=20&m=544676786&s=170667a&w=0&h=RgTR6kPDFzMM0v0v73x00qOQPw7lyp1johT_XN1Geks="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/beautiful-details-of-santorini-island-greece-picture-id1335017056?b=1&k=20&m=1335017056&s=170667a&w=0&h=Y6bOLrdurdIC-OcFpyumzTpvxGLho_qb_3C1OwvSbSg="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/newzealand-picture-id1365419977?b=1&k=20&m=1365419977&s=170667a&w=0&h=F5DoTfcU0-3hQTSiFPaoJcXCon1SKqheiM_DqyvsZM0="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/cobo-rocks-on-coast-picture-id502668370?b=1&k=20&m=502668370&s=170667a&w=0&h=9iNmvHS_oqpHMm9P6zhLXTei4WHoqIJn-8VdZA7yr2g="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/newzealand-picture-id1365419977?b=1&k=20&m=1365419977&s=170667a&w=0&h=F5DoTfcU0-3hQTSiFPaoJcXCon1SKqheiM_DqyvsZM0="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/beautiful-details-of-santorini-island-greece-picture-id1335017056?b=1&k=20&m=1335017056&s=170667a&w=0&h=Y6bOLrdurdIC-OcFpyumzTpvxGLho_qb_3C1OwvSbSg="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-3 col-sm-6">
+							<div class="card card-hover">
+								<div class="card-img">
+									<img
+										class="card-img-top"
+										src="https://media.istockphoto.com/photos/newzealand-picture-id1365419977?b=1&k=20&m=1365419977&s=170667a&w=0&h=F5DoTfcU0-3hQTSiFPaoJcXCon1SKqheiM_DqyvsZM0="
+										alt="Network Error...."
+									/>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title text-center">Rome</h5>
+									<p class="card-text">
+										Florence & Venice 9-Nights Vacation w/Air
+									</p>
+									<p class="card-text">
+										This is lowest price we've seen in four years of nights.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="estimate">
+			<div class="estimate py-5">
+				<div class="container">
+					<div class="est-title">
+						<h1>GET A QUICK ESTIMATE</h1>
+						<h5 class="text-muted pl-2 pb-2">GET A PROFESSIONAL HELP</h5>
+					</div>
+					<div class="est-content">
+						<div class="row">
+							<div class="form-group col-md-2 col-sm-2">
+								<select id="my-select" class="form-control" name="passenger">
+									<option>Travel Purpose</option>
+									<option>Vacation</option>
+									<option>Business Trip</option>
+									<option>Event</option>
+									<option>Function</option>
+								</select>
+							</div>
+							<div class="form-group col-md-2 col-sm-2">
+								<input
+									id="my-input"
+									class="form-control"
+									type="date"
+									name="date"
+								/>
+							</div>
+							<div class="form-group col-md-2 col-sm-2">
+								<select id="my-select" class="form-control" name="peopleNo">
+									<option>People Numbers</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+								</select>
+							</div>
+							<div class="form-group col-md-3 col-sm-3">
+								<input
+									id="my-input"
+									class="form-control"
+									type="email"
+									placeholder="Your email"
+									name="email"
+								/>
+							</div>
+							<div class="form-group col-md-3 col-sm-3">
+								<button type="button" class="btn btn-warning px-5">
+									Calculate
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="ltsBlog">
+			<div class="ltsBlog py-5 text-white">
+				<div class="container">
+					<div class="row">
+						<div class="ltsB-title">
+							<h1 class="text-center">LATEST BLOG</h1>
+						</div>
+						<div class="ltsB-para">
+							<p class="text-center pb-4">
+								Begum Para was an Indian Hindi film actress. A paramilitary
+								organization. From 1986 to 2011 the Central Armed Police Forces
+								were considered as Central Police Forces (CPO).
+							</p>
+						</div>
+						<div class="ltsB-blogs">
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+                                    <div class="card border-0 assign bg-transparent mb-3" style="max-width: 540px">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkRooKTQf4gzZzvBSu074TZPe-pJnhWa5eJw&usqp=CAU"
+                                                    class="img-fluid rounded-start"
+                                                    alt="Network Erroer...."
+                                                />
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body px-3 pt-0">
+                                                    <p class="card-text m-0 pt-0 pb-2">
+                                                        <small class="text-warning">Feb 01 2021</small>
+                                                    </p>
+                                                    <h5 class="card-title pb-2">10 things todo before travel</h5>
+                                                    <p class="card-text card-fsize ">
+                                                        Feb,01,2021 10 things todo before travel Begum Para
+                                                        was an Indian Hindi film actress.Begum Para was an
+                                                        Indian Hindi film actress.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="card border-0 assign bg-transparent mb-3" style="max-width: 540px">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP32seyHBtjMD6iHJv_4UG0hWtpy5ORyilCg&usqp=CAU"
+                                                    class="img-fluid rounded-start"
+                                                    alt="Network Error..."
+                                                />
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body px-3 pt-0">
+                                                    <p class="card-text m-0 pt-0 pb-2">
+                                                        <small class="text-warning">March 10 2021</small> 
+                                                    </p>
+                                                    <h5 class="card-title pb-2">10 things todo before travel</h5>
+                                                    <p class="card-text card-fsize">
+                                                        Feb,01,2021 10 things todo before travel Begum Para
+                                                        was an Indian Hindi film actress.Begum Para was an
+                                                        Indian Hindi film actress.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="card border-0 assign bg-transparent mb-3" style="max-width: 540px">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScj9VtpfOhh-zGzqYG080WsXdTB2y6wFqcdA&usqp=CAU"
+                                                    class="img-fluid rounded-start"
+                                                    alt="Network Erroer...."
+                                                />
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body px-3 pt-0">
+                                                    <p class="card-text m-0 pt-0 pb-2">
+                                                        <small class="text-warning ">April 25 2021</small>
+                                                    </p>
+                                                    <h5 class="card-title pb-2">10 things todo before travel</h5>
+                                                    <p class="card-text card-fsize">
+                                                        Feb,01,2021 10 things todo before travel Begum Para
+                                                        was an Indian Hindi film actress.Begum Para was an
+                                                        Indian Hindi film actress.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="card border-0 assign bg-transparent mb-3" style="max-width: 540px">
+                                        <div class="row g-0">
+                                            <div class="col-md-4 ">
+                                                <img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaB3oMjTy135V0MVnuOLX45LzQ9W5tmx5E7Q&usqp=CAU"
+                                                    class="img-fluid rounded-start"
+                                                    alt="Network Error..."
+                                                />
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body px-3 pt-0">
+                                                    <p class="card-text m-0 pt-0 pb-2">
+                                                        <small class="text-warning">July 01 2021</small>
+                                                    </p>
+                                                    <h5 class="card-title pb-2">10 things todo before travel</h5>
+                                                    <p class="card-text card-fsize">
+                                                        Feb,01,2021 10 things todo before travel Begum Para
+                                                        was an Indian Hindi film actress.Begum Para was an
+                                                        Indian Hindi film actress.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        
+<footer class="nb-footer">
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-12">
+	<div class="about-t">
+	 
+	
+	  <div class="social-media">
+		<ul class="list-inline d-flex justify-content-center">
+		  <li class="px-2"><a href="http://www.facebook.com/" ><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+		  <li class="px-2"><a href="http://www.twitter.com/" ><i class="fa fa-twitter"></i></a></li>
+		  <li class="px-2"><a href="http://www.google.com/" ><i class="fa fa-google-plus"></i></a></li>
+		  <li class="px-2"><a href="http://www.linkedin.com/" ><i class="fa fa-linkedin"></i></a></li>
+		 
+		</ul>
+	  </div>
+	</div>
+	</div>
+	
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+	  <h2 class="title">Help Center</h2>
+	  <ul class="list-unstyled">
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
+	  </ul>
+	</div>
+	</div>
+	
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+	  <h2 class="title">Customer information</h2>
+	  <ul class="list-unstyled">
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
+	  </ul>
+	</div>
+	</div>
+	
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+	  <h2 class="title">Security & privacy</h2>
+	  <ul class="list-unstyled">
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
+	  </ul>
+	</div>
+	</div>
+	
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+	  <h2 class="title">Payment</h2>
+	  <p></p>
+	  
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<section class="copyright">
+	<div class="container">
+	<div class="row">
+	<div class="d-flex justify-content-center">
+	<p>Copyright © 2022. Your Company.</p>
+	</div>
+	
+	</div>
+	</div>
+	</section>
+</footer>
+
+<!-- showing Login Form  MOdel-->
+	<div class="modal fade"
+				id="loginToggle"
+				aria-hidden="true"
+				aria-labelledby="ModalToggleLabel"
+				tabindex="-1">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="d-flex justify-content-end">
+							<button type="button" class="btn-close btn-animation float-end pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+							
+						</div>
+						<h5 class="modal-title text-center fs-3 pt-0" id="ModalToggleLabel">
+							Login
+						</h5>
+
+						<div class="modal-body">
+							<form action="" method="post">
+								<div class="form-floating mb-3">
+									<input
+										type="text"
+										class="form-control"
+										id="floatingInput"
+										name="uname"
+										placeholder="name@example.com"
+									/>
+									<label for="floatingInput">User Name</label>
+								</div>
+								<div class="form-floating mb-3">
+									<input
+										type="password"
+										class="form-control"
+										name="pass"
+										id="floatingPassword"
+										placeholder="Password"
+									/>
+									<label for="floatingPassword">Password</label>
+								</div>
+								<div class="form-floating mb-3 d-flex justify-content-between">
+									
+										<div class="col-7">
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="inlineFormCheck"
+												/>
+												<label class="form-check-label" for="inlineFormCheck">
+													Remember me
+												</label>
+											</div>
+										</div>
+										<div class="forgetpass">
+											<a href="" class="text-decoration-none"> Forget Password</a>
+										</div>
+								</div>
+								<div class="form-floating text-center" >
+									<button type="submit" class="btn btn-block btn-success fs-5" style="height: 50px;">
+										Login
+									</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="modal-footer justify-content-center">
+							Not a member
+							<a
+								class="text-decoration-none"
+								href=""
+								data-bs-target="#exampleModalToggle2"
+								data-bs-toggle="modal"
+								data-bs-dismiss="modal"
+								>Register</a
+							>
+						</div>
+					</div>
+				</div>
+	</div>
+
+<!-- getting next register form model -->
+
+		<div class="modal fade"
+		id="exampleModalToggle2"
+		aria-hidden="true"
+		aria-labelledby="exampleModalToggleLabel2"
+		tabindex="-1"
+	>
+		<div class="modal-dialog modal-dialog-centered" style="width: 420px;">
+			<div class="modal-content">
+				<div class="d-flex justify-content-end">
+					<button type="button" class="btn-close float-end btn-animation pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+					
+				</div>
+				<div class="heading text-center">
+					<h5
+						class="modal-title text-uppercase fs-3"
+						id="exampleModalToggleLabel2"
+					>
+						Register
+					</h5>
+				</div>
+				<div class="modal-body">
+					<form class="row g-3" action="" method="post">
+						<div class="col-md-6">
+							<label for="fname" class="form-label">First Name</label>
+							<input type="text" class="form-control" name="" id="fname" />
+						</div>
+						<div class="col-md-6">
+							<label for="lname" class="form-label">Last Name</label>
+							<input type="text" class="form-control" name="" id="lname" />
+						</div>
+						<div class="col-md-12">
+							<label for="inputEmail4" class="form-label">Email</label>
+							<input type="text" class="form-control" id="inputEmail4" />
+						</div>
+						<div class="col-md-12">
+							<label for="inputPassword4" class="form-label">Password</label>
+							<input
+								type="password"
+								class="form-control"
+								id="inputPassword4"
+							/>
+						</div>
+						<div class="col-md-3">
+							
+							<label>
+							  Gender
+							</label>
+						</div>
+						<div class="form-check col-md-3">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+							  Male
+							</label>
+						  </div>
+						  <div class="form-check col-md-3">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+							  Female
+							</label>
+						  </div>
+						  <div class="form-check col-md-3">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+							  Other
+							</label>
+						  </div>
+						
+						<div class="col-md-6">
+							<label for="inputCity" class="form-label">City</label>
+							<input type="text" class="form-control" id="inputCity" />
+						</div>
+						<div class="col-md-6">
+							<label for="inputState" class="form-label">State</label>
+							<select id="inputState" class="form-select">
+								<option selected>Choose...</option>
+								<option>Maharashtra</option>
+								<option>MP</option>
+								<option>UP</option>
+								<option>Bihar</option>
+							</select>
+						</div>
+						
+						<div class="col-12">
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									id="gridCheck"
+								/>
+								<label class="form-check-label" for="gridCheck">
+									I agree with terms and condition
+								</label>
+							</div>
+						</div>
+						<div class="form-floating text-center">
+							<button type="submit" class="btn btn-success w-50%">Sign in</button>
+						</div>
+						
+						</div>
+					</form>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+    window.addEventListener("scroll",function(){
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("sticky",window.scrollY > 200)
+    })
+</script>
+	</body>
+</html>

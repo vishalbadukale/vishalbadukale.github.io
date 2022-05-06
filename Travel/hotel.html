@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hotel</title>
+		<!-- fontawsome icon links -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/162dba6519.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://kit.fontawesome.com/13f391ae93.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- bootStrap links -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
+		<!-- Style CSS link -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-collapse navbar-expand-lg navbar-dark fixed-top">
+			<div class="container">
+				<a href="" class="navbar-brand fs-3">
+					<span>I</span><span>G</span><span>O</span>
+				</a>
+				<button
+					type="button"
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse text-center bg-transparent"
+					id="mynav"
+				>
+					<div class="navbar-nav ms-auto">
+						<a href="index.html" class="nav-item nav-link fs-5">Flight</a>
+						<a href="car.html" class="nav-item nav-link fs-5">Car</a>
+						<a href="hotel.html" class="nav-item nav-link active fs-5">Hotel</a>
+						<a href="tripfind.html" class="nav-item nav-link fs-5"
+							>Trip Finder</a
+						>
+						<a href="#inspi" class="nav-item nav-link fs-5">Inspiration</a>
+						
+					<a class="nav-item nav-link fs-5" aria-current="page"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginToggle">Login</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section id="hotel" class="hotel">
+			<div class="flight-g">
+				<div class="container">
+					<div class="hotel-content">
+						<div class="hotel-form">
+							<div class="row">
+								<div class="form-group col-md-3 col-sm-6">
+									<input
+										id="my-input"
+										class="form-control"
+										type="text"
+										placeholder="Check in date"
+										name="inDate"
+									/>
+								</div>
+								<div class="form-group col-md-3 col-sm-6">
+									<input
+										id="my-input"
+										class="form-control"
+										type="text"
+										placeholder="Check out date"
+										name="outDate"
+									/>
+								</div>
+
+								<div class="form-group col-md-3 col-sm-6">
+									<select id="my-select" class="form-control" name="">
+										<option>Booking for</option>
+										<option>Family</option>
+										<option>Couple</option>
+										<option>Adults</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3 col-sm-6">
+									<button type="button" class="btn btn-outline-warning">
+										Check Availability
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flight-search pr-0 pb-2 col-md-12">
+						<div class="row">
+							<div class="col-md-10">
+								<div class="flight-icon pl-0 d-flex">
+									<div class="f-icons">
+										<a class="flight-link" href="index.html"
+											><i class="fa-solid fa-plane-departure shadow"></i
+											>Fights</a
+										>
+									</div>
+									<div class="f-icons">
+										<a class="flight-link" href="car.html"
+											><i class="fa-solid fa-car shadow"></i>Cars</a
+										>
+									</div>
+									<div class="f-icons" style="background: red">
+										<a class="flight-link" href="hotel.html"
+											><i class="fa-solid fa-bed shadow"></i>Hotel</a
+										>
+									</div>
+								</div>
+								<div class="flight-search-content">
+									<div class="flight-form pt-3">
+										<div class="row">
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Origin City"
+													name="ocity"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="text"
+													placeholder="Destination City"
+													name="dcity"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<input
+													id="my-input"
+													class="form-control"
+													type="date"
+													name="date"
+												/>
+											</div>
+											<div class="form-group col-md-3 col-sm-6">
+												<select id="my-select" class="form-control" name="">
+													<option>Passenger</option>
+													<option>1 Passenger</option>
+													<option>2 Passenger</option>
+													<option>3 Passenger</option>
+													<option>4 Passenger</option>
+													<option>5 Passenger</option>
+													<option>6 Passenger</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="flight-ticket">
+									<div class="row">
+										<div class="form-group col-md-3 col-sm-6">
+											<select class="form-select" id="selectTrip">
+												<option selected>Trip Type</option>
+												<option value="return">Return Ticket</option>
+												<option value="oneDay">One Day</option>
+												<option value="twoDay">Two Day</option>
+											</select>
+										</div>
+										<div class="form-group col-md-3 col-sm-6">
+											<select class="form-select" id="selectTrip">
+												<option selected>Ticket Class</option>
+												<option value="return">First Class</option>
+												<option value="oneDay">Business Class</option>
+												<option value="twoDay">Economy Class</option>
+											</select>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="directFlight"
+												/>
+												<label
+													class="form-check-label text-white"
+													for="directFlight"
+												>
+													Online Booking
+												</label>
+											</div>
+										</div>
+										<div
+											class="form-group col-md-3 col-sm-6 d-flex justify-content-start align-items-center"
+										>
+											<div class="form-check">
+												<input
+													class="form-check-input"
+													type="checkbox"
+													id="nearbyAirport"
+												/>
+												<label
+													class="form-check-label text-white"
+													for="nearbyAirport"
+												>
+													Nearby Hotels
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="col-md-2 d-flex justify-content-center align-items-center"
+							>
+								<button type="button" class="btn btn-warning text-uppercase">
+									Search
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="hotelType">
+			<div class="hotelType">
+				<div class="container">
+					<div class="hotelType-title">
+						<h1 class="text-center text-uppercase">Popular Hotels</h1>
+					</div>
+
+					<div class="row">
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-12">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-3">
+                                    <img src="https://img.etimg.com/thumb/msid-64734932,width-1070,height-580,overlay-economictimes/photo.jpg" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-9">
+                                    <div class="card-body">
+                                      
+                                      <div class="row">
+                                        <h3 class="card-title">Taj Palace</h3>
+                                          <div class="col-md-5">
+                                            
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i> Apollo Bunder, Mumbai</p>
+                                            <p class="card-text text-muted">25.0km from Chhatrapati Shivaji International Airport</p>
+                                            <p class="card-text text-muted">A landmark hotel that overlooks the Arabian Sea and the Gateway of India. Built in 1903, this is India’s first luxury hotel.</p>
+                                          </div>
+                                          <div class="col-md-5">
+                                            <p class="card-text"><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  India's First Luxury Hotel</p>
+                                            <p class="card-text text-muted"><i class="bi bi-cup-straw"></i>   High-tea & Live Music Every Evening</p>
+                                            <p class="card-text text-muted">	9 Iconic Restaurants & Bars</p>
+                                          </div>
+                                          <div class="col-md-2 viewHotel">
+                                              <div class="">
+                                                  <p><i class="fa fa-indian-rupee-sign fs-5 "></i><span class="fw-bolder fs-5"> 25000*</span> </p>
+                                                  <a class="btn  btn-success btn-sm text-uppercase" data-bs-toggle="modal" href="#viewHotelModalToggle" role="button">view hotel</a>
+                                                  
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer class="nb-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about-t">
+							<div class="social-media">
+								<ul class="list-inline d-flex justify-content-center">
+									<li class="px-2">
+										<a href="http://www.facebook.com/"
+											><i class="fa fa-facebook" aria-hidden="true"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.twitter.com/"
+											><i class="fa fa-twitter"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.google.com/"
+											><i class="fa fa-google-plus"></i
+										></a>
+									</li>
+									<li class="px-2">
+										<a href="http://www.linkedin.com/"
+											><i class="fa fa-linkedin"></i
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Help Center</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> How to Pay</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> FAQ's</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Sitemap</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Delivery Info</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Customer information</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> About Us</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> FAQ's</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Sell Your Items</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Contact Us</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> RSS</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Security & privacy</h2>
+							<ul class="list-unstyled">
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Terms Of Use</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Privacy Policy</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Return / Refund
+										Policy</a
+									>
+								</li>
+								<li>
+									<a href="#" title=""
+										><i class="fa fa-angle-double-right"></i> Store Locations</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="footer-info-single">
+							<h2 class="title">Payment</h2>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="d-flex justify-content-center">
+							<p>Copyright © 2022. Your Company.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+
+<!-- see model of hotel -->
+<div class="modal fade" id="viewHotelModalToggle" aria-hidden="true" aria-labelledby="viewHotelModalToggle" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0 pt-2 pr-2 pb-0 mb-0">
+          <button type="button" class="btn-close btn-animation" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h2 class="modal-title text-center" id="viewHotelModalToggleLabel">The Taj Mahal Palace</h2>
+       
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="hotelMain-title pb-2">
+                    <h5>5 Star Hotel in Mumbai</h5>
+                   </div>
+                    
+                  <div class="h-info mb-4">
+                    <p> <i class="fa fa-location-dot text-danger" aria-hidden="true"></i>  Apollo Bunder, Mumbai, Maharashtra, 400 001, India</p>
+                    <p><i class="fa fa-phone text-primary"></i>  +91 22-6665 3366 /For Room Reservations : +91 22-6480 4425</p>
+                    <p><i class="fa fa-envelope-o text-warning" aria-hidden="true"></i> reservations.mumbai@ihcltata.com</p>
+                    <p>
+                        The Taj Mahal Palace opened in Mumbai, then Bombay, in 1903, giving birth to the country’s first harbour landmark. The recently trademarked flagship hotel overloo...
+
+                    </p>
+                  </div>
+                    <div class="highlight mb-4">
+                        <div class="hightlight-title pb-2">
+                            <h5>Hotel Highlights</h5>
+                        </div>
+                        <div class="highlight-content">
+                            <p><i class="fa fa-location-dot text-danger" aria-hidden="true"></i>	India's First Luxury Hotel</p>
+                            <p> 9 Iconic Restaurants & Bars</p>
+                            <p>	High-tea & Live Music Every Evening</p>
+                            <p>Luxury Shopping Arcade</p>
+                        </div>
+                    </div>
+                    <div class="hotelPolicies mb-4">
+                        <div class="hp-title pb-2">
+                            <h5>Hotel Policies</h5>
+                        </div>
+                        <p>Check-in: 1500 hours or 03:00 p.m.</p>
+                            <p>Check-out: 1100 hours or 11:00 a.m</p>
+                            <p>Early check-in and late check-out on request</p>
+                            <p>We accept American Express, Diner's Club, Master Card, Visa, JCB International</p>
+                            <p>Pets are not allowed.</p>
+                    </div>
+                    <div class="he mb-4">
+                        <div class="he-title pb-2">
+                            <h5>Hotel Essentials</h5>
+                            <a href="/content/dam/luxury/hotels/Taj_Mahal_Mumbai/documents/FACTSHEET-The%20Taj%20Mahal%20Palace,%20Mumbai.pdf"">Download Brochure</a> <p> GSTIN : 27AAACT3957G1Z7</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/gallery/ViewoftheGatewayofIndia-3x2.jpg/jcr:content/renditions/cq5dam.web.323.323.jpeg" alt="Network Error.....">
+                        </div>
+                        
+                            <div class="col-md-6">
+                                <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/gallery/Aquarius%20Suite%20-%20Bedroom.jpg/jcr:content/renditions/cq5dam.web.323.323.jpeg" alt="Network Error.....">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/gallery/Aquarius%20Suite%20-%20Bedroom.jpg/jcr:content/renditions/cq5dam.web.323.323.jpeg" alt="Network Error.....">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/gallery/Aquarius%20Suite%20-%20Bedroom.jpg/jcr:content/renditions/cq5dam.web.323.323.jpeg" alt="Network Erroer.....">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Mahal_Mumbai/images/gallery/Ballroom.jpg/jcr:content/renditions/cq5dam.web.323.323.jpeg" alt="Network Error....">
+                            </div>
+                           
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- showing Login Form  MOdel-->
+<div class="modal fade"
+id="loginToggle"
+aria-hidden="true"
+aria-labelledby="ModalToggleLabel"
+tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn-close btn-animation float-end pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+        </div>
+        <h5 class="modal-title text-center fs-3 pt-0" id="ModalToggleLabel">
+            Login
+        </h5>
+
+        <div class="modal-body">
+            <form action="" method="post">
+                <div class="form-floating mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        name="uname"
+                        placeholder="name@example.com"
+                    />
+                    <label for="floatingInput">User Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input
+                        type="password"
+                        class="form-control"
+                        name="pass"
+                        id="floatingPassword"
+                        placeholder="Password"
+                    />
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating mb-3 d-flex justify-content-between">
+                    
+                        <div class="col-7">
+                            <div class="form-check">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="inlineFormCheck"
+                                />
+                                <label class="form-check-label" for="inlineFormCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="forgetpass">
+                            <a href="" class="text-decoration-none"> Forget Password</a>
+                        </div>
+                </div>
+                <div class="form-floating text-center" >
+                    <button type="submit" class="btn btn-block btn-success fs-5" style="height: 50px;">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer justify-content-center">
+            Not a member
+            <a
+                class="text-decoration-none"
+                href=""
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+                data-bs-dismiss="modal"
+                >Register</a
+            >
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- getting next register form model -->
+
+<div class="modal fade"
+id="exampleModalToggle2"
+aria-hidden="true"
+aria-labelledby="exampleModalToggleLabel2"
+tabindex="-1"
+>
+<div class="modal-dialog modal-dialog-centered" style="width: 420px;">
+    <div class="modal-content">
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn-close float-end btn-animation pl-3 pt-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+        </div>
+        <div class="heading text-center">
+            <h5
+                class="modal-title text-uppercase fs-3"
+                id="exampleModalToggleLabel2"
+            >
+                Register
+            </h5>
+        </div>
+        <div class="modal-body">
+            <form class="row g-3" action="" method="post">
+                <div class="col-md-6">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="" id="fname" />
+                </div>
+                <div class="col-md-6">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="" id="lname" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="inputEmail4" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword4"
+                    />
+                </div>
+                <div class="col-md-3">
+                    
+                    <label>
+                      Gender
+                    </label>
+                </div>
+                <div class="form-check col-md-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Female
+                    </label>
+                  </div>
+                  <div class="form-check col-md-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Other
+                    </label>
+                  </div>
+                
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity" />
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>Maharashtra</option>
+                        <option>MP</option>
+                        <option>UP</option>
+                        <option>Bihar</option>
+                    </select>
+                </div>
+                
+                <div class="col-12">
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                        />
+                        <label class="form-check-label" for="gridCheck">
+                            I agree with terms and condition
+                        </label>
+                    </div>
+                </div>
+                <div class="form-floating text-center">
+                    <button type="submit" class="btn btn-success w-50%">Sign in</button>
+                </div>
+                
+                </div>
+            </form>
+        </div>
+        
+        </div>
+    </div>
+</div>
+</div>
+
+		<script>
+			window.addEventListener("scroll", function () {
+				var nav = document.querySelector("nav");
+				nav.classList.toggle("sticky", window.scrollY > 200);
+			});
+		</script>
+	</body>
+</html>
