@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>School</title>
+
+		<!-- bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+			crossorigin="anonymous"
+		></script>
+		<!-- fontawsome  -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/162dba6519.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- OwlCarousel -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		/>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" href="Styles/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+                    <div class="col-md-6">
+                        <div class="head-contact">
+                            <a class="px-4" href=""> <i class="fa fa-phone text-primary pe-2" aria-hidden="true"></i>  +91 84561236821</a>
+                            <a class="px-4" href=""> <i class="fa fa-envelope-o text-warning pe-2" aria-hidden="true"> </i>  Educaton@support.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="head-profile">
+                            <a class="px-4" href="">Become A Teacher </a>
+                            <a class="px-4" href="">My Profile</a>
+                        </div>
+                    </div>
+				</div>
+				
+			</div>
+		</header> 
+		<nav class="navbar navbar-collapse navbar-expand-lg bg-dark navbar-dark ">
+			<div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="./Images/logo.png" alt="">
+                    <h1>VYWS School</h1>
+                    <h1>VYWS School</h1>
+                   
+                </a>
+				<button
+					type="button"
+					class="navbar-toggler"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-center bg-transparent"
+					id="mynav">
+					<div class="navbar-nav ms-auto">
+						<a href="#home" class="nav-item nav-link active fs-5">Home</a>
+						<a href="#about" class="nav-item nav-link fs-5">About</a>
+						<a href="#teachers" class="nav-item nav-link fs-5">Teacher</a>
+						<div class="dropdown me-1">
+							<a
+								href="#events"
+								class="nav-item nav-link dropdown-toggle fs-5"
+								id="dropdownMenuOffset"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+								data-bs-offset="10,20"
+								>Event</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+								<li><a class="dropdown-item" href="#">Event1</a></li>
+								<li><a class="dropdown-item" href="#">Event2 </a></li>
+								<li><a class="dropdown-item" href="#">Event3</a></li>
+							</ul>
+						</div>
+
+						<a href="#gallery" class="nav-item nav-link fs-5">Gallery</a>
+
+						<div class="dropdown me-1">
+							<a
+								href="#"
+								class="nav-item nav-link fs-5 dropdown-toggle"
+								id="dropdownMenuOffset"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+								data-bs-offset="10,20"
+								>Course</a
+							>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+								<li><a class="dropdown-item" href="#">course1</a></li>
+								<li><a class="dropdown-item" href="#">course2 </a></li>
+								<li><a class="dropdown-item" href="#">course3</a></li>
+							</ul>
+						</div>
+
+						<a class="nav-item nav-link fs-5" href="#contact">Contact</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+       
+
+		<section id="home">
+			<div class="container-fixed">
+				<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+					<!-- Carousel indicators -->
+					<ol class="carousel-indicators">
+						<li
+							data-bs-target="#myCarousel"
+							data-bs-slide-to="0"
+							class="active"
+						></li>
+						<li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+						<li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for carousel items -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								src="./Images/h1.jpg"
+								class="d-block w-100"
+								alt="Slide 1"
+							/>
+
+							<div class="carousel-caption text-start">
+								<h1 class="animated bounceInRight">Education Is the Backbone </h1>
+                                    <h2 class="animated bounceInRight">of the
+                                        Nation.</h2>
+                                        <p class=" animated bounceInLeft d-none d-md-block ">
+                                            Lorem ipsum dolor sit amet consectetuer adipiscing elit nam
+                                            nibh nunc varius facilisis eros sed erat in in velit quis arcu
+                                            curabitur adipiscing luctus massa.
+                                        </p>
+								<a href="" class="btn btn-warning rounded-0 animated bounceInRight ">Discover More</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="./Images/h2.jpg"
+								class="d-block w-100"
+								alt="Slide 2"
+							/>
+							<div class="carousel-caption text-start">
+								<h1 class="animated bounceInRight">PERFECT FOR YOUR PRIMARY OR HIGH SCHOOL</h1>
+								<p class="animated bounceInLeft d-none d-md-block">
+									Lorem ipsum dolor sit amet consectetuer adipiscing elit nam
+									nibh nunc varius facilisis eros sed erat in in velit quis arcu
+									curabitur adipiscing luctus massa.
+								</p>
+								<a href="" class="btn btn-warning rounded-0 animated bounceInRight">Discover More</a>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="./Images/h3.jpg"
+								class="d-block w-100"
+								alt="Slide 3"
+							/>
+							<div class="carousel-caption text-start">
+								<h1 class="animated bounceInRight">PERFECT FOR YOUR COLLEGE</h1>
+								<p class="animated bounceInLeft d-none d-md-block">
+									Lorem ipsum dolor sit amet consectetuer adipiscing elit nam
+									nibh nunc varius facilisis eros sed erat in in velit quis arcu
+									curabitur adipiscing luctus massa.
+								</p>
+								<a href="" class="btn btn-warning rounded-0 animated bounceInRight">Discover More</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Carousel controls -->
+					<a
+						class="carousel-control-prev"
+						href="#myCarousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a
+						class="carousel-control-next"
+						href="#myCarousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</div>
+		</section>
+        <section id="instructor">
+            <div class="instruct">
+                <div class="container">
+                    <div class="instruct-titles">
+						<h1 class="pb-0 mb-0">Top Instructor</h1>
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+					</div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="inst-card">
+                                <div class="inst-img pb-2">
+                                    <div class="useme">
+                                        <img src="./Images/Ti1.jpg" alt="Network Error...">
+                                        <div class="vishal">
+                                            <div class="left-icon">
+                                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                                                <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <h4>Amlie Stan</h4>
+                                <p>Science</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="inst-card">
+                                <div class="inst-img pb-2">
+                                    <div class="useme">
+                                        <img src="./Images/Ti2.png" alt="Network Error...">
+                                        <div class="vishal">
+                                            <div class="left-icon">
+                                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                                                <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <h4>Dylan Meringue</h4>
+                                <p>Mathematics</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="inst-card">
+                                <div class="inst-img pb-2">
+                                    <div class="useme">
+                                        <img src="./Images/Ti3.png" alt="Network Error...">
+                                        <div class="vishal">
+                                            <div class="left-icon">
+                                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                                                <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <h4>Andrew Meri</h4>
+                                <p>Science</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="inst-card">
+                                <div class="inst-img pb-2">
+                                    <div class="useme">
+                                        <img src="./Images/Ti4.jpg" alt="Network Error...">
+                                        <div class="vishal">
+                                            <div class="left-icon">
+                                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-twitter" aria-hidden="true"></i> </a>
+                                                <a href=""> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                <a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <h4>Dylan Meringue</h4>
+                                <p>Science</p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+		<section id="services">
+			<div class="services">
+				<div class="container">
+					<div class="services-titles">
+						<h1 class="pb-0 mb-0">Our Services</h1>
+
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card1 shadow">
+								<i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+								<h4 class="pb-2">Sports</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card2 shadow">
+								<i class="fa fa-keyboard-o" aria-hidden="true"></i>
+								<h4 class="pb-2">Bus Service</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card3 shadow">
+								<i class="fa fa-bullhorn" aria-hidden="true"></i>
+								<h4 class="pb-2">Teachers</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card4 shadow">
+								<i class="fa fa-life-bouy" aria-hidden="true"></i>
+								<h4 class="pb-2">Class</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card5 shadow">
+								<i class="fa fa-briefcase" aria-hidden="true"></i>
+								<h4 class="pb-2">Bus Service</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="services-card6 shadow">
+								<i class="fa fa-camera-retro" aria-hidden="true"></i>
+								<h4 class="pb-2">Bus Service</h4>
+								<p class="text-center">
+									Lorem Ipsum is simply dummy text of the printing and
+									typesetting industry. Lorem Ipsum has been the industry's
+									standard.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="gallery">
+			<div class="gallery">
+				<div class="container">
+					<div class="gallery-titles">
+						<h1 class="pb-0 mb-0">Our Gallery</h1>
+
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+					</div>
+					<div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/1.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/2.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/3.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/4.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/5.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="gallery-content pb-3">
+                                <img src="./Images/6.jpg" alt="Network Error...">
+                                <div class="g-img">
+                                   <div class="g-imgIcon">
+                                    <a href="" class="btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-image fa-2x " aria-hidden="true"></i></a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</section>
+
+		<section id="teachers">
+			<div class="teacher">
+				<div class="container">
+					<div class="tech-titles">
+						<h1 class="pb-0 mb-0">Our Teachers</h1>
+
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+					</div>
+					<div class="row">
+						<div class="owl-carousel owl-theme">
+							<div class="items col-sm-6 active">
+								<div class="teacher-info">
+									<div class="img-round">
+                                        <img
+										class="rounded-circle"
+										src="./Images/teach1.png"
+										alt=""
+									/>
+                                    </div>
+									<h5 class="pt-3">Teacher Name</h5>
+									<p class="text-center pb-2">Teacher Designation</p>
+									<div class="teach-icon d-flex">
+										<i class="fa px-2 fa-facebook" aria-hidden="true"></i>
+										<i class="fa px-2 fa-twitter" aria-hidden="true"></i>
+										<i class="fa px-2 fa-instagram" aria-hidden="true"></i>
+										<i class="fa px-2 fa-linkedin" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+                            <div class="items col-sm-6">
+								<div class="teacher-info">
+									<img
+										class="rounded-circle"
+										src="./Images/teach2.png"
+										alt=""
+									/>
+									<h5 class="pt-3">Teacher Name</h5>
+									<p class="text-center pb-2">Teacher Designation</p>
+									<div class="teach-icon d-flex">
+										<i class="fa px-2 fa-facebook" aria-hidden="true"></i>
+										<i class="fa px-2 fa-twitter" aria-hidden="true"></i>
+										<i class="fa px-2 fa-instagram" aria-hidden="true"></i>
+										<i class="fa px-2 fa-linkedin" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+                            <div class="items col-sm-6">
+								<div class="teacher-info">
+									<img
+										class="rounded-circle"
+										src="./Images/teach3.png"
+										alt=""
+									/>
+									<h5 class="pt-3">Teacher Name</h5>
+									<p class="text-center pb-2">Teacher Designation</p>
+									<div class="teach-icon d-flex">
+										<i class="fa px-2 fa-facebook" aria-hidden="true"></i>
+										<i class="fa px-2 fa-twitter" aria-hidden="true"></i>
+										<i class="fa px-2 fa-instagram" aria-hidden="true"></i>
+										<i class="fa px-2 fa-linkedin" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+                            <div class="items col-sm-6">
+								<div class="teacher-info">
+									<img
+										class="rounded-circle"
+										src="./Images/teach4.png"
+										alt=""
+									/>
+									<h5 class="pt-3">Teacher Name</h5>
+									<p class="text-center pb-2">Teacher Designation</p>
+									<div class="teach-icon d-flex">
+										<i class="fa px-2 fa-facebook" aria-hidden="true"></i>
+										<i class="fa px-2 fa-twitter" aria-hidden="true"></i>
+										<i class="fa px-2 fa-instagram" aria-hidden="true"></i>
+										<i class="fa px-2 fa-linkedin" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <section id="events">
+            <div class="event">
+                <div class="container">
+                    <div class="event-titles">
+						<h1 class="pb-0 mb-0">Our Events</h1>
+
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <h1>Event Dates</h1>
+                            <div class="e-dates">
+                                <div class="e-date pb-2 pt-4">
+                                    <div class="e-titile text-primary">Chocolate Candy exibution</div>
+                                    <div class="e-icon">
+                                        <i class="fa fa-calendar " aria-hidden="true"></i> 9 Oct 2022
+                                    </div>
+                                </div>
+                                <div class="e-date pb-2">
+                                    <div class="e-titile text-primary">Career Program</div>
+                                    <div class="e-icon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> 10 Oct 2022
+                                    </div>
+                                </div>
+                                <div class="e-date pb-2">
+                                    <div class="e-titile text-primary">Traditional And Culturer Program</div>
+                                    <div class="e-icon ">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> 12 Oct 2022
+                                    </div>
+                                </div>
+                                <div class="e-date pb-2">
+                                    <div class="e-titile text-primary">Trainings </div>
+                                    <div class="e-icon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> 18 Oct 2022
+                                    </div>
+                                </div>
+                                <div class="e-date pb-2">
+                                    <div class="e-titile text-primary">Sports </div>
+                                    <div class="e-icon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i> 20 Oct 2022
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                                <div class="container-fixed my-3">
+                                    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <!-- Carousel indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></li>
+                                            <li data-bs-target="#eventCarousel" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#eventCarousel" data-bs-slide-to="2"></li>
+                                        </ol>
+                            
+                                        <!-- Wrapper for carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="http://www.kidsworldschoolnagpur.com/images/slider_background3.jpg" class="d-block w-100" alt="Slide 1">
+                                                <div class="carousel-caption  d-md-block text-start">
+                                                    <p class="text-warning">Show your contrubution in event</p>
+                                                    <h1>Dancing and more</h1>
+                                                
+                                                    <a href="" class="btn btn-warning rounded-0">Participate</a>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="http://www.kidsworldschoolnagpur.com/images/slider_background4.jpg" class="d-block w-100" alt="Slide 2">
+                                                <div class="carousel-caption  d-md-block text-start">
+                                                    <p class="text-warning">Show your contrubution in event</p>
+                                                    <h1>Morden painting and learning program</h1>
+                                                    <a href="" class="btn btn-warning rounded-0">Participate</a>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="http://www.kidsworldschoolnagpur.com/images/slider_background.jpg" class="d-block w-100" alt="Slide 3">
+                                                <div class="carousel-caption  d-md-block text-start">
+                                                    <p class="text-warning">Show your contrubution in event</p>
+                                                    <h1>Seminars about Career</h1>
+                                                    
+                                                    <a href="" class="btn btn-warning rounded-0">Participate</a>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="http://www.kidsworldschoolnagpur.com/images/slider_background5.jpg" class="d-block w-100" alt="Slide 3">
+                                                <div class="carousel-caption  d-md-block text-start">
+                                                    <p class="text-warning">Show your contrubution in event</p>
+                                                    <h1>Culture and Traditonal program</h1>
+                                                
+                                                    <a href="" class="btn btn-warning rounded-0">Participate</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Carousel controls -->
+                                        <a class="carousel-control-prev" href="#eventCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#eventCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                            
+                            
+                                </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <section id="Course">
+            <div class="course">
+                <div class="container">
+                    <div class="course-titles">
+						<h1 class="pb-0 mb-0">Course</h1>
+
+						<p class="text-center py-3 w-75">
+							Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+							tempor enim minim veniam quis notru exercit ation Lorem ipsum
+							dolor sit amet.Veniam quis notru exercit.
+						</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c1.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Basic Learning</h5>
+                                    <p class="card-text">Teaching proper and understable to student also online session has been recorded. Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c2.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sports and Heath</h5>
+                                    <p class="card-text">Each sport Play in our institute and well known instructors are. Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c3.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Painting</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+                                        tempor . Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c3.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Painting</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
+                                        tempor . Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c2.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Basic Learning</h5>
+                                    <p class="card-text">Teaching proper and understable to student also online session has been recorded. Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card mb-3">
+                               <div class="course-zoom">
+                                <img class="card-img-top" src="./Images/c1.jpg" alt="Network Erorr...">
+                               </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sports and Heath</h5>
+                                    <p class="card-text">Each sport Play in our institute and well known instructors are. Also <span class="text-warning"> Premium Course</span> available </p>
+                                    
+                                    <a href="" class="btn btn-primary"> Premium Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+       
+<!-- here is loader 1-->
+
+            <div class="loader_bg">
+                <div class="loader"></div>
+            </div>
+      
+       <!-- see loader 2 -->
+       
+        <section>
+           <div class="spin">
+               <div class="spin1">
+                <span class="spinner-grow " role="status" aria-hidden="true"></span>
+               </div>
+               <div class="spin2">
+                <span class="spinner-grow " role="status" aria-hidden="true"></span>
+               </div>
+               <div class="spin3">
+                <span class="spinner-grow " role="status" aria-hidden="true"></span>
+               </div>
+           </div>
+        </section>
+
+
+        <footer class="nb-footer bg-dark">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12">
+            <div class="about-t">
+             
+            
+              <div class="social-media">
+                <ul class="list-inline d-flex justify-content-center">
+                  <li class="px-2"><a href="http://www.facebook.com/" ><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+                  <li class="px-2"><a href="http://www.twitter.com/" ><i class="fa fa-twitter"></i></a></li>
+                  <li class="px-2"><a href="http://www.google.com/" ><i class="fa fa-google-plus"></i></a></li>
+                  <li class="px-2"><a href="http://www.linkedin.com/" ><i class="fa fa-linkedin"></i></a></li>
+                 
+                </ul>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-info-single">
+                 <img class="school-logo" src="./Images/logo.png" alt="">
+                </div>
+                </div>
+            <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">Help Center</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                <!-- <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li> -->
+              </ul>
+            </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">Customer information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                <!-- <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li> -->
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                <!-- <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li> -->
+              </ul>
+            </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">Security & privacy</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+                <!-- <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li> -->
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> College Locations</a></li>
+              </ul>
+            </div>
+            </div>
+            
+            
+            </div>
+            </div>
+            
+            <section class="copyright">
+            <div class="container">
+            <div class="row">
+            <div class="d-flex justify-content-center align-items-center">
+            <p>VYWS Group Copyright © 2022. All Rights Reserved.</p>
+            </div>
+            
+            </div>
+            </div>
+            </section>
+        </footer>
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+    
+
+          <script src="./Scripts/scroll-out.js"></script>
+		
+		
+        <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+		<script>
+			$(".owl-carousel").owlCarousel({
+				items: 4,
+				loop: true,
+				nav: true,
+				autoplay: true,
+				autoplayTimeout: 2000,
+				autoplaySpeed: 2000,
+				autoplayHoverPause: true,
+
+				responsive: {
+					0: {
+						items: 4,
+						nav: true,
+					},
+					600: {
+						items: 3,
+					},
+					1000: {
+						items: 4,
+						nav: true,
+					},
+				},
+			});
+		</script>
+        <script>
+            window.addEventListener("scroll",function(){
+                var nav = document.querySelector("nav");
+                if(window.pageYOffset > 80)
+                nav.classList.toggle("sticky",window.scrollY > 80)
+                else
+                nav.classList.remove("sticky")
+            })
+            // var nav = document.querySelector(".navbar")
+            // var menu = document.querySelector(".navbar-collapse")
+            // window.onscroll=function(){
+
+            //     if(window.pageYOffset >= menu.offsetTop)
+            //     {
+            //         nav.classList.add("sticky");
+            //     }
+            //     else
+            //     nav.classList.remove("sticky");
+            // }
+
+        </script>
+		<script>
+			ScrollOut({
+				targets: "h1,a,.navbar-nav ",
+			});
+            // offsetX({
+            //     targets: "a",
+            // });
+		</script>
+        <script>
+            $(window).on("load",function(){
+                $('.loader_bg').fadeOut("slow");
+            })
+           
+        </script>
+	</body>
+</html>
