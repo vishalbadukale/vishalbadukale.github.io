@@ -1,78 +1,123 @@
-const CLIENT_ID = "du76b0325f518bdc69bef6";
-const CLIENT_SECRET = "23712e541124454a367405ed2a03658718250556";
+const CLIENT_ID = "90c2058a2b07e2ca3588";
+const CLIENT_SECRET = "0f0a84f90cc6367811e0ce5e294b2db1b0aa1c48";
 
 async function getUser(name) {
-	const resp = await fetch(
-		`https://api.github.com/users/${name}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+	const res = await fetch(
+		`https://api.github.com/users/${name}?client_id=${CLIENT_ID}&client_secrect=${CLIENT_SECRET}`
 	);
-	const profile = await resp.json();
 
+	const profile = await res.json();
 	return profile;
 }
 
-document
-	.querySelector("#search")
-	.addEventListener("submit", async function (e) {
-		e.preventDefault();
-		const inputValue = document.querySelector("#findByUsername").value;
-		const data = await getUser(inputValue);
-
-		userShow(data);
-		const repos = await getRepo(data);
-		showRepos(repos);
-	});
-
-async function getRepo(repos) {
-	const repos = await fetch(
-		`${data.repos_url}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+async function getRepos(profile) {
+	const res = await fetch(
+		`${profile.repos_url}?client_id=${CLIENT_ID}&client_secrect=${CLIENT_SECRET}&per_page=10`
 	);
-	const repo = await repos.json();
+
+	const repo = await res.json();
 	return repo;
 }
 
-showRepos();
+document.querySelector("#search").addEventListener("submit", async (e) => {
+	e.preventDefault();
+	const username = document.querySelector("#findByUsername").value;
+
+	if (username.length > 0) {
+		document.querySelector(".loader").style.display = "block";
+		document.querySelector(".user-details").style.display = "none";
+		document.querySelector(".user-details").style.display = "none";
+		const profile = await getUser(username);
+		document.querySelector(".loader").style.display = "none";
+
+		if (profile.message === "Not Found") {
+			document.querySelector(".notFound").style.display = "block";
+		} else {
+			const repos = await getRepos(profile);
+			document.querySelector(".user-details").style.display = "flex";
+			showProfile(profile);
+			showRepos(repos);
+		}
+	}
+});
+
 function showRepos(repos) {
-	for (let repo of repos) console.log(repos);
-	const newHtml = `
-    <div class="repo">
-              <div class="repo_name">
-                <a href="#">Swiftmailer-CSS-Inliner</a>
-              </div>
-              <p>
-                <span class="circle"></span> JavaScript
-                <ion-icon name="star-outline"></ion-icon> 941
-                <ion-icon name="git-branch-outline"></ion-icon> 687
-              </p>
-            </div>
-    `;
+	let newHtml = "";
+	for (let repo of repos) {
+		newHtml += `
+          <div class="repo">
+          <div class="repo_name">
+            <a href="${repo.html_url}"> ${repo.name}</a>
+          </div>
+          <p>
+            <span class="circle"></span> ${repo.language}
+            <ion-icon name="star-outline"></ion-icon>${repo.watchers_count}
+            <ion-icon name="git-branch-outline"></ion-icon> ${repo.forks_count}
+          </p>
+        </div> 
+          `;
+	}
+
+	document.querySelector(".repos").innerHTML = newHtml;
 }
- 
-async function userShow(data) {
+
+function showProfile(profile) {
 	document.querySelector(".profile").innerHTML = `
-          <img
-            src="${data.avatar_url} "/>
-          <p class="name">${data.name}</p>
-          <p class="username login">${data.login}</p>
+     <img
+     src="${profile.avatar_url} "
+   />
+   <p class="name">${profile.name}</p>
+   <p class="username login">${profile.login}</p>
+   <p class="bio">
+   ${profile.bio}
+   </p>
+
+   <div class="followers-stars">
+     <p>
+       <ion-icon name="people-outline"></ion-icon>
+       <span class="followers"> ${profile.followers} </span> followers
+     </p>
+     <span class="dot">·</span>
+     <p><span class="following"> ${profile.following} </span> following</p>
+   </div>
+
+   <p class="company">
+     <ion-icon name="business-outline"></ion-icon>
+     ${profile.company}
+   </p>
+   <p class="location">
+     <ion-icon name="location-outline"></ion-icon>${profile.location}
+   </p>    
+     
+     `;
+}
+
+/*
+ <img
+            src="https://avatars3.githubusercontent.com/u/47313?s=400&u=7ba05204271a726f8642ac15864e2f361b5c0198&v=4"
+            alt="letstrie"
+          />
+          <p class="name">Fabien Potencier</p>
+          <p class="username login">fabpot</p>
           <p class="bio">
-          ${data.bio}
+            Simplifying things for fun
           </p>
 
           <div class="followers-stars">
             <p>
               <ion-icon name="people-outline"></ion-icon>
-              <span class="followers"> ${data.followers} </span> followers
+              <span class="followers"> 10 </span> followers
             </p>
             <span class="dot">·</span>
-            <p><span class="following"> ${data.following} </span> following</p>
+            <p><span class="following"> 20 </span> following</p>
           </div>
 
           <p class="company">
             <ion-icon name="business-outline"></ion-icon>
-            ${data.company}
+            Symfony/Blackfire
           </p>
           <p class="location">
-            <ion-icon name="location-outline"></ion-icon>${data.location}
+            <ion-icon name="location-outline"></ion-icon>Lille, France
           </p>
-        
-    `;
-}
+
+*/
