@@ -8,11 +8,10 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/162dba6519.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://unpkg.com/scrollreveal"></script>
 
 
 
@@ -463,7 +462,7 @@
 												</div>
 											</div>
 										</div>
-										<!-- <div class="carousel-item" data-bs-interval="2000">
+										 <div class="carousel-item" data-bs-interval="2000">
 											<div class="d-flex">
 												<div class="col-md-4 main mt-2">
 													<img src="https://images.unsplash.com/photo-1455146106369-1e31beb07fce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvZmZlJTIwd2l0aCUyMGZyaWVuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Network Error">
@@ -579,11 +578,11 @@
 																</div>
 																
 															</div>
-															col-sm-6 
+															 
 															
 														</div>
 													</div>
-												col-sm-6 </div>
+												 </div>
 												<div class="col-md-4 main mt-2">
 													<img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Network Error">
 													<div class="overlay col-md-12 col-sm-12">
@@ -608,7 +607,7 @@
 													</div>
 												</div>
 											</div>
-										</div> -->
+										</div> 
 										
 									
 							</div>
@@ -1011,8 +1010,10 @@
 			</div>
 		</div>
 
+		
+
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
 <script>
 // 	const show=document.querySelectorAll(".index")
 // 	const  hide = document.querySelectorAll(".fa-caret-down")
@@ -1032,5 +1033,28 @@
 	
 
 </script>	
+<script> 
+ ScrollReveal({ 
+            //   reset: true,
+              distance:'60px',
+                duration:2000,
+                delay:100,
+            
+            });
+			ScrollReveal().reveal('.menu-title h1,.location-title h1,.contact-title h1', { delay: 500, origin:'bottom' });
+	   		ScrollReveal().reveal('.menu .col-md-4', { delay:16, origin:'right', interval:200});
+			   ScrollReveal().reveal('.about-title h1,.about p', { delay: 700, origin:'bottom' , interval:200 });
+           
+            ScrollReveal().reveal('#carouselExampleIndicators ', { delay: 700, origin:'right' });
+
+			ScrollReveal().reveal('.location .col-md-6', { delay: 500, origin:'left'});
+			ScrollReveal().reveal('.location .col-md-6.card ', { delay: 500, origin:'right'});
+
+			ScrollReveal().reveal('.contact-card .col-md-9', { delay: 500, origin:'left' , interval:200 });
+			ScrollReveal().reveal('.contact .contact-form ', { delay: 700, origin:'right'});
+
+			ScrollReveal().reveal('.social-media li', { delay: 500, origin:'bottom' , interval:200 });
+
+</script>
 	</body>
 </html>
