@@ -5,12 +5,15 @@
 	text-decoration: none;
 }
 
+
+
 .btn-close:focus,
 .form-control:focus,
 .form-check-input:focus,
 .form-select:focus {
 	box-shadow: none;
 }
+
 
 nav {
 	background-color: transparent;
@@ -228,15 +231,13 @@ nav.sticky .navbar-nav a {
 	height: 100vh;
 }
 
-
 .car .flight-search button {
 	padding: 0.5rem 1.1rem;
 	border: 1px solid yellow;
 	border-radius: 50%;
 	height: 50%;
 }
-.refer
-{
+.refer {
 	padding-top: 150px;
 	padding-bottom: 150px;
 	background: #ebebebc7;
@@ -254,30 +255,26 @@ nav.sticky .navbar-nav a {
 .refer .img2 {
 	height: 120px;
 	padding-top: 12px;
-	
 }
-.refer .img1{
+.refer .img1 {
 	padding-top: 12px;
 }
 
-.card2{
+.card2 {
 	margin-bottom: 25px;
 }
-#cDest{
+#cDest {
 	background: url(./Images/CarDesti.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
-	
 }
-.cDest{
+.cDest {
 	padding: 50px 0;
-	
 }
 
-.cDest .card p:last-child{
-font-size: 13px;
+.cDest .card p:last-child {
+	font-size: 13px;
 }
 /* see HOtel CSS Start */
 .hotel {
@@ -295,66 +292,67 @@ font-size: 13px;
 .hotel .flight-search {
 	margin-top: 10px;
 }
-.hotelType{
+.hotelType {
 	padding: 50px 0;
 }
-.hotelType .card .col-md-4 .text-muted{
+.hotelType .card .col-md-4 .text-muted {
 	font-size: 12px;
-
 }
-.hotelType-title{
-padding-bottom: 30px;
+.hotelType-title {
+	padding-bottom: 30px;
 }
-.hotelType .card img{
+.hotelType .card img {
 	height: 100%;
 	width: 100%;
 }
-.viewHotel
-{
+.viewHotel {
 	display: flex;
-    place-self: flex-end;
+	place-self: flex-end;
 }
-.modal-body img{
-	width:100% ;
+.modal-body img {
+	width: 100%;
 	height: 100%;
 }
-#viewHotelModalToggle p i
-{
-font-size: 18px;
+#viewHotelModalToggle p i {
+	font-size: 18px;
 }
-.hotelPolicies p{
+.hotelPolicies p {
 	padding-bottom: 0;
 	margin-bottom: 0;
 	font-size: 15px;
 }
-#viewHotelModalToggle .modal-body{
+#viewHotelModalToggle .modal-body {
 	padding: 2% 6%;
 }
-.highlight-content p,.highlight p,.h-info p{
+.highlight-content p,
+.highlight p,
+.h-info p {
 	margin-bottom: 0.5rem;
 }
-.hotelMain-title h5,.hightlight-title h5,.hotelPolicies h5,.he-title h5{
+.hotelMain-title h5,
+.hightlight-title h5,
+.hotelPolicies h5,
+.he-title h5 {
 	padding-bottom: 4px;
 }
-.btn-animation:hover{
-transform: rotate(360deg) scale(1);
-transition: 0.9s;
-color: greenyellow;
+.btn-animation:hover {
+	transform: rotate(360deg) scale(1);
+	transition: 0.9s;
+	color: greenyellow;
 }
 
-@media (min-width: 576px){
-.modal-dialog {
-    max-width: 330px;
-    margin: 1.75rem auto;
-}
-#exampleModalToggle2 .modal-dialog {
-  
-    margin: 1.75rem auto;
-	max-width: 500px;
-}
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 330px;
+		margin: 1.75rem auto;
+	}
+	#exampleModalToggle2 .modal-dialog {
+		margin: 1.75rem auto;
+		max-width: 500px;
+	}
 }
 
-/* here footer start */	
+/* here footer start */
 
 footer.nb-footer {
 	background: #222;
@@ -424,7 +422,8 @@ footer.nb-footer .copyright p {
 }
 
 @media (max-width: 480px) {
-	.flight,.car {
+	.flight,
+	.car {
 		height: 520px;
 	}
 	.flight-txt {
@@ -462,7 +461,8 @@ footer.nb-footer .copyright p {
 	}
 	.flight-form .form-control,
 	.flight-form .form-select,
-	.flight-ticket .form-select,.hotel .form-control {
+	.flight-ticket .form-select,
+	.hotel .form-control {
 		font-size: 0.76rem;
 		height: 30px;
 		padding: 0.2rem 0.5rem;
@@ -486,7 +486,8 @@ footer.nb-footer .copyright p {
 	.fun-title h1,
 	.pDest-title h1,
 	.ltsB-title h1,
-	.est-title h1,.cDest-title h1 {
+	.est-title h1,
+	.cDest-title h1 {
 		font-size: 20px;
 	}
 
@@ -516,7 +517,8 @@ footer.nb-footer .copyright p {
 	.sub-title p,
 	.ltsB-para,
 	.ltsBlog p,
-	.fun .fun-icon span,.refer .card-title p {
+	.fun .fun-icon span,
+	.refer .card-title p {
 		font-size: 12px;
 	}
 	.pDest .card-text {
@@ -530,41 +532,40 @@ footer.nb-footer .copyright p {
 		font-size: 17px;
 	}
 
-	.pDest .col-sm-6,.hotel-content .col-sm-6 {
+	.pDest .col-sm-6,
+	.hotel-content .col-sm-6 {
 		width: 50%;
 	}
-	.car .flight-search button{
+	.car .flight-search button {
 		height: 30px;
 		width: 50%;
 		border-radius: 2px;
 	}
-	.refer .col-sm-6{
+	.refer .col-sm-6 {
 		width: 85%;
 		margin: 0 8%;
 	}
-	.cDest .card{
+	.cDest .card {
 		flex-direction: row;
 	}
-	.cDest .card .card-img .card-img-top{
+	.cDest .card .card-img .card-img-top {
 		height: 100%;
 	}
-	.refer .card-title{
+	.refer .card-title {
 		text-align: center;
 	}
-	.hotel-form{
+	.hotel-form {
 		padding-top: 10rem;
 	}
-	
-	.hotel .flight-search{
 
+	.hotel .flight-search {
 	}
-
 }
 @media (min-width: 481px) and (max-width: 575px) {
 	.flight {
 		height: 520px;
 	}
-	
+
 	.flight-txt {
 		padding-top: 90px;
 		font-size: 20px;
@@ -597,7 +598,8 @@ footer.nb-footer .copyright p {
 	}
 
 	.flight-form .col-sm-6,
-	.flight-ticket .col-sm-6, .cDest .col-sm-6 {
+	.flight-ticket .col-sm-6,
+	.cDest .col-sm-6 {
 		width: 48%;
 	}
 	.flight-form .form-control,
@@ -626,7 +628,7 @@ footer.nb-footer .copyright p {
 	.fun .fun-icon p {
 		font-size: 15px;
 	}
-	
+
 	.fun .fun-icon span {
 		font-size: 12px;
 	}
@@ -644,26 +646,23 @@ footer.nb-footer .copyright p {
 		font-size: 12px;
 		margin-bottom: 0;
 	}
-	
-	.car .flight-search{
 
+	.car .flight-search {
 		margin-top: 0px;
-
 	}
-	#car
-	{
+	#car {
 		height: 520px;
 	}
-	.car .flight-search button{
+	.car .flight-search button {
 		height: 40px;
 		width: 50%;
 		border-radius: 2px;
 	}
-	.refer .col-sm-6{
+	.refer .col-sm-6 {
 		width: 85%;
 		margin: 0 8%;
 	}
-	.refer .card-title{
+	.refer .card-title {
 		text-align: center;
 	}
 }
@@ -671,7 +670,7 @@ footer.nb-footer .copyright p {
 	.flight {
 		height: 520px;
 	}
-	#car{
+	#car {
 		height: 620px;
 	}
 	.flight-txt {
@@ -716,7 +715,7 @@ footer.nb-footer .copyright p {
 		padding: 0.28rem 0.57rem;
 	}
 
-	.flight-ticket .form-select{
+	.flight-ticket .form-select {
 		font-size: 0.76rem;
 		height: 30px;
 		padding: 0.2rem 0.5rem;
@@ -730,10 +729,10 @@ footer.nb-footer .copyright p {
 	.fun .fun-icon span {
 		font-size: 12px;
 	}
-	.refer .card-title{
+	.refer .card-title {
 		text-align: center;
 	}
-	.car .flight-search button{
+	.car .flight-search button {
 		height: 40px;
 		width: 50%;
 		border-radius: 2px;
@@ -741,7 +740,8 @@ footer.nb-footer .copyright p {
 }
 
 @media (min-width: 768px) and (max-width: 897px) {
-	.flight,.car {
+	.flight,
+	.car {
 		height: 540px;
 	}
 	.flight-txt {
@@ -783,7 +783,7 @@ footer.nb-footer .copyright p {
 	.pDest .card-text {
 		font-size: 14px;
 	}
-	.car .flight-search button{
+	.car .flight-search button {
 		width: 101%;
 		height: 33%;
 		text-align: center;
@@ -809,7 +809,7 @@ footer.nb-footer .copyright p {
 	.pDest .card-text {
 		font-size: 14px;
 	}
-	.car .flight-search button{
+	.car .flight-search button {
 		width: 75%;
 		height: 36%;
 		text-align: center;
@@ -818,16 +818,14 @@ footer.nb-footer .copyright p {
 		justify-content: center;
 		align-items: center;
 	}
-
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.flight-search button {
 		padding: 0.5rem 1.1rem;
 	}
-	#car{	
+	#car {
 		height: 600px;
 	}
-	
 }
 
 @media (max-width: 574px) {

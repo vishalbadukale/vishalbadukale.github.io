@@ -45,6 +45,7 @@
 		></script>
 		<!-- Style CSS link -->
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-collapse navbar-expand-lg navbar-dark fixed-top">
@@ -234,7 +235,7 @@
 			<div class="refer">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-6 mb-3 col-sm-6">
+						<div class="col-md-6 mb-3 col-sm-6 slide-left">
 							<div
 								class="card shadow mb-3"
 								style="max-width: 540px; padding: 10px"
@@ -260,7 +261,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-6">
+						<div class="col-md-6 col-sm-6 slide-right">
 							<div
 								class="card shadow mb-3"
 								style="max-width: 540px; padding: 10px"
@@ -798,12 +799,48 @@ tabindex="-1"
 	</div>
 </div>
 </div>
+<!-- here is loader 1-->
 
+<div class="loader_bg">
+	<div class="loader"></div>
+</div>
+
+	<script>
+		$(window).on("load",function(){
+			$('.loader_bg').fadeOut("slow");
+		})
+	   
+	</script>
 		<script>
 			window.addEventListener("scroll", function () {
 				var nav = document.querySelector("nav");
 				nav.classList.toggle("sticky", window.scrollY > 200);
 			});
 		</script>
+		<script>
+			ScrollReveal({ 
+				   //   reset: true,
+					 distance:'60px',
+					   duration:2000,
+					   delay:100,
+				   
+				   });
+				   ScrollReveal().reveal('.fun-title h1,.pDest-title h1,.ltsB-title h1,.cDest-title h1', { delay: 500, origin:'bottom' });
+				   ScrollReveal().reveal('.fun .col-md-2', { delay: 700, origin:'left' , interval:200 });
+	   
+				   ScrollReveal().reveal('.fun-icon i,.est-content', { delay: 500, origin:'bottom'});
+	   
+				   ScrollReveal().reveal('.sub-title h2,.est-title h5,.refer .slide-right', { delay: 500, origin:'right'});
+	   
+				   ScrollReveal().reveal('.sub-title p,.sub-form', { delay: 600, origin:'left'});
+				   ScrollReveal().reveal('', { delay: 500, origin:'left'});
+				   ScrollReveal().reveal('.pDest .col-md-3,.ltsB-para,.cDest .col-md-3', { delay: 700, origin:'bottom' , interval:200 });
+	   
+				   ScrollReveal().reveal('.est-title h1,.refer .slide-left,.cDest .col-md-3 h5', { delay: 500, origin:'left'});
+	   
+				   ScrollReveal().reveal('.ltsB-blogs .slide-left', { delay: 500, origin:'left' , interval:200 });
+				   ScrollReveal().reveal('.ltsB-blogs .slide-right,.cDest .col-md-3 p', { delay: 500, origin:'right' , interval:200 });
+				   ScrollReveal().reveal('.social-media li', { delay: 500, origin:'bottom' , interval:200 });
+	   </script>
 	</body>
 </html>
