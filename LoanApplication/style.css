@@ -266,11 +266,11 @@ color: red;
 .attemptCount.active{
 	display: flex;
 }
-.success{
+.vData{
 	display: none;
 	color: greenyellow;
 }
-.success.active{
+.vData.active{
 display: block;
 }
 .main

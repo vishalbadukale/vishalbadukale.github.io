@@ -10,7 +10,6 @@ const userData = [];
 // console.log(userData)
 var userHere = {};
 
-
 let captchaAns = null;
 
 loanForm.addEventListener('submit', function (e) {
@@ -127,12 +126,7 @@ const Ones = [
 		'Ninety',
 		'Hundred',
 	],
-	Scale = [
-		'',
-		'Thousand',
-		'Million',
-		'Billion',
-	];
+	Scale = ['', 'Thousand', 'Million', 'Billion'];
 
 const integerToWords = (n = 0) => {
 	if (n == 0) return 'Zero'; // check for zero
@@ -272,7 +266,7 @@ function re() {
 	return ab;
 }
 
-var count = 2;
+var count = 3;
 
 //==================================
 
@@ -283,7 +277,7 @@ const validateOTP = () => {
 	const reload = document.querySelector('.optValidate i');
 	error.classList.remove('active');
 
-	if (count >= 0) {
+	if (count > 0) {
 		if (ab == userInput) {
 			reload.classList.add('active');
 			error.classList.remove('active');
@@ -299,14 +293,11 @@ const validateOTP = () => {
 			count--;
 			re();
 		}
+	} else if (count == 0) {
+		setTimeout(() => {
+			window.location.href = ' http://pixel6.co/404';
+		}, 3000);
 	}
-	if(count == -1){
-		error.classList.add('active');
-		setTimeout(()=>{
-			 window.location.href = ' http://pixel6.co/404';
-		},3000)
-	}
-
 };
 
 document
