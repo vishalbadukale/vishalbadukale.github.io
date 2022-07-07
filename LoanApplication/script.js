@@ -300,7 +300,12 @@ const validateOTP = () => {
 			re();
 		}
 	}
-	if(count == 0) window.location.href = ' http://pixel6.co/404';
+	if(count == -1){
+		error.classList.add('active');
+		setTimeout(()=>{
+			 window.location.href = ' http://pixel6.co/404';
+		},3000)
+	}
 
 };
 
