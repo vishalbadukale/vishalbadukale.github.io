@@ -10,12 +10,6 @@ const userData = [];
 // console.log(userData)
 var userHere = {};
 
-// const use =  userData.map((data) => {
-// 	const fname = data.Name;
-// 	const email = data.email;
-// 	return [fname, email]
-
-// });
 
 let captchaAns = null;
 
@@ -274,7 +268,7 @@ const otp = () => {
 var ab;
 function re() {
 	ab = otp();
-	console.log('Generated Otp ' + ab);
+	console.log('Generated OTP :- ' + ab);
 	return ab;
 }
 
@@ -306,6 +300,8 @@ const validateOTP = () => {
 			re();
 		}
 	}
+	if(count == 0) window.location.href = ' http://pixel6.co/404';
+
 };
 
 document
