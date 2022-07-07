@@ -1,0 +1,298 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+input:invalid {
+    border: 3px solid red;
+}
+.container,
+.loanApp,
+.capcha,
+.capchaData,
+.optValidate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+.loanApp {
+	flex-direction: column;
+background: rgb(238, 238, 238);
+width: 35%;
+height: 700px;
+border-radius: 10px;
+box-shadow: 0px 5px 15px #a0a0a0;
+}
+.loan {
+	width: 75%;
+}
+
+.loanHeading {
+	padding: 20px 0;
+}
+.inp {
+	padding: 10px 0;
+}
+.label {
+}
+.form-input input {
+	height: 40px;
+	width: 100%;
+	margin-top: 5px;
+	border-radius: 5px;
+	font-size: 15px;
+	padding: 0 10px;
+}
+.checkInput {
+	position: relative;
+	display: none;
+}
+.checkInput.active {
+	display: flex;
+}
+.nameDesc {
+	position: absolute;
+	z-index: 1;
+	background: #ffffffb3;
+	width: 65%;
+	display: none;
+	right: 0;
+	border-radius: 5px;
+}
+.nameDesc ul {
+	width: 100%;
+	font-size: 12px;
+	list-style-position: inside;
+	padding: 10px 20px;
+}
+.checkInput:hover .nameDesc {
+	display: block;
+}
+.emailVal,
+.pan {
+	display: none;
+}
+.emailVal.active,
+.pan.active,
+.error .wrong.active,
+.error .right.active {
+	display: block;
+}
+#pan {
+	text-transform: uppercase;
+}
+
+.inp button {
+	background-color: #04aa6d;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.amountShow {
+	display: flex;
+justify-content: end;
+align-items: center;
+height: 35px;
+	
+}
+.capcha,
+.capchaData {
+	flex-direction: row;
+}
+.capchaData {
+	background: url(https://codingnepalweb.com/demos/custom-captcha-in-javascript/captcha-bg.png);
+	/* padding: 20px 10px; */
+	width: 125px;
+	height: 55px;
+	
+}
+.num1{
+	transform: rotate(-45deg);
+}
+.num2{
+	transform: rotate(-40deg);
+}
+
+.num1 span,
+.num2 span,
+.oper span {
+	font-style: italic;
+	padding: 0 10px;
+	font-size: 25px;
+}
+.equalTo {
+	font-size: 20px;
+	padding: 0 20px;
+}
+.check {
+	width: 35%;
+}
+.reloadCapcha i {
+	padding-left: 10px;
+	cursor: pointer;
+}
+.error i {
+	font-size: 25px;
+}
+.wrong i {
+	color: red;
+}
+.right i {
+	color: greenyellow;
+}
+.error .wrong,
+.error .right {
+	display: none;
+}
+
+/* model pop up */
+
+.thankYouPage {
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	visibility: hidden;
+	overflow: hidden;
+}
+.thankYouPage.active{
+	visibility: visible;
+}
+.page {
+	
+	height: 100vh;
+}
+
+.msgPage {
+	position: absolute;
+	background: white;
+	top: 40%;
+	left: 50%;
+	width: 40%;
+	height: 350px;
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.7s ease;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+
+}
+.msgPage.active {
+	visibility: visible;
+	top: 50%;
+	opacity: 1;
+	transition: 0.7s;
+}
+
+.msgPage .contain {
+	padding: 50px;
+}
+.closeButton {
+	position: absolute;
+	top: 2%;
+	right: 3%;
+	transform: translate(10%, 10%);
+}
+.closeButton i {
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: transform 0.7s ease-in-out;
+}
+.closeButton i:hover {
+	transform: rotate(360deg);
+	color: red;
+}
+.thanksHeading h1 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+.thanksData p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+.thanksData p:nth-child(2) {
+	padding: 10px 0;
+}
+.optValidate {
+	padding: 10px 0;
+}
+.optValidate input {
+	height: 35px;
+	width: 30%;
+	font-size: 18px;
+	margin-right: 20px;
+	padding: 5px 10px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.optValidate button {
+	height: 40px;
+	width: 100px;
+	background: greenyellow;
+	border: 1px solid rgb(155, 230, 43);
+	font-size: 15px;
+	border-radius: 5px;
+}
+.optValidate i{
+visibility: hidden;
+}
+.optValidate i.active{
+	visibility: visible;
+	  margin-left: 10px;
+ 	 font-size: 17px;
+	 color: greenyellow;
+}
+
+.attemptCount{
+	display: none;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: red;
+} 
+.attemptCount.active{
+	display: flex;
+}
+.success{
+	display: none;
+	color: greenyellow;
+}
+.success.active{
+display: block;
+}
+.main
+{
+	display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.tData{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+
+}
+
+.tContent{
+
+}
+
+
+

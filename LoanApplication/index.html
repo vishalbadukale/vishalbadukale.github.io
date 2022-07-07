@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+
+    <script src="https://kit.fontawesome.com/162dba6519.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/13f391ae93.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="loanApp">
+            <div class="loanHeading">
+                <h1>Loan Application</h1>
+            </div>
+            <div class="loan">
+
+                <form action="" method="get" id="loanForm" name="loanForm">
+                    <div class="inp">
+                        <div class="label"><label for="fname">Full Name</label></div>
+                        <div class="form-input">
+                            <input type="text" name="fname" id="fname" placeholder="Eg. Sam Nick">
+                        </div>
+                        <div class="checkInput">
+                            <div class="inputError" style="width: 65%; color:rgb(182, 10, 10);">
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                <span> please enter valid name</span>
+                            </div>
+                            <div class="nameDesc">
+                                <ul>
+                                    <li>Name Should be in 2 words</li>
+                                    <li>Each Word length > 4</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="inp">
+                        <div class="label"><label for="email">Email</label></div>
+                        <div class="form-input">
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="inputError emailVal" style="width: 65%; color:rgb(182, 10, 10);">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            <span> Invalid email address</span>
+                        </div>
+                    </div>
+                    <div class="inp">
+                        <div class="label"><label for="pan">PAN</label></div>
+                        <div class="form-input">
+                            <input type="text" name="pan" id="pan">
+                        </div>
+                        <div class="inputError pan" style="width: 65%; color:rgb(182, 10, 10);">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            <span> Invalid PAN number</span>
+                        </div>
+                    </div>
+                    <div class="inp">
+                        <div class="label"><label for="amount">Amount</label></div>
+                        <div class="form-input">
+                            <input type="text"  name="amount" id="amount" pattern="[0-9]+">
+                        </div>
+                    </div>
+                    <div class="inp">
+                        <div class="amountShow">
+                            <p id="intword"></p>
+                        </div>
+                    </div>
+                    <div class="inp">
+                        <div class="capcha">
+                            <div class="capchaData">
+                                <div class="num1"><span>1</span></div>
+                                <div class="oper"><span>+</span></div>
+                                <div class="num2"><span>2</span></div>
+                            </div>
+                            <div class="reloadCapcha">
+                                <i class="fa fa-rotate-right"></i>
+                            </div>
+                            <div class="equalTo">=</div>
+                            <div class="form-input check">
+                                <input type="text" name="vali" id="validate" value="0">
+                            </div>
+
+                        </div>
+                        <div class="inp error">
+                            <div class="wrong">
+                                <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <span> Wrong Answer
+                                    ...</span>
+                            </div>
+                            <div class="right">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i> <span>Correct ...</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="inp">
+                        <button id="submitForm">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model pop up -->
+   <div class="thankYouPage">
+    <div class="page">
+        <div class="msgPage">
+         <div class="contain">
+            <div class="closeButton">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="thanksHeading">
+                <h1>Thank You !</h1>
+            </div>
+            <div class="thanksData">
+                <p id="userName">Dear <em></em>,</p>
+                <p id="userEmail">Thank you for your inquery. A 4 digit verification number has been sent to your email
+                    <strong></strong> please enter it the following box and submit for confiration
+            
+                </p>
+                <div class="optValidate">
+                    <input type="text" placeholder="Enter OTP" />
+                    <button>Validate</button> <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div class="attemptCount">
+                    <p>Please enter valid OTP <span></span> left</p>
+                    <div class="success">
+                        <p>Validation Successfull</p>
+                    </div>
+                </div>
+               
+         </div>
+               
+
+            </div>
+        </div>
+    </div>
+   </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
