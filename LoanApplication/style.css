@@ -10,7 +10,7 @@ input:invalid {
 .loanApp,
 .capcha,
 .capchaData,
-.optValidate {
+.optValidate,.loanHeading,.num1,.num2,.amtError {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -34,6 +34,11 @@ box-shadow: 0px 5px 15px #a0a0a0;
 
 .loanHeading {
 	padding: 20px 0;
+	height: 120px;
+width: 100%;
+}
+.loanHeading h1{
+	text-align: center;
 }
 .inp {
 	padding: 10px 0;
@@ -45,7 +50,7 @@ box-shadow: 0px 5px 15px #a0a0a0;
 	width: 100%;
 	margin-top: 5px;
 	border-radius: 5px;
-	font-size: 15px;
+	font-size: 1rem;
 	padding: 0 10px;
 }
 .checkInput {
@@ -70,17 +75,14 @@ box-shadow: 0px 5px 15px #a0a0a0;
 	list-style-position: inside;
 	padding: 10px 20px;
 }
-.checkInput:hover .nameDesc {
-	display: block;
-}
 .emailVal,
-.pan {
+.pan,.amtError {
 	display: none;
 }
 .emailVal.active,
 .pan.active,
 .error .wrong.active,
-.error .right.active {
+.error .right.active,.amtError.active,.checkInput:hover .nameDesc {
 	display: block;
 }
 #pan {
@@ -110,14 +112,16 @@ height: 35px;
 .capchaData {
 	background: url(https://codingnepalweb.com/demos/custom-captcha-in-javascript/captcha-bg.png);
 	/* padding: 20px 10px; */
-	width: 125px;
+	width: 35%;
 	height: 55px;
 	
 }
 .num1{
 	transform: rotate(-45deg);
+	width: 30%;
 }
 .num2{
+	width: 30%;
 	transform: rotate(-40deg);
 }
 
@@ -126,10 +130,10 @@ height: 35px;
 .oper span {
 	font-style: italic;
 	padding: 0 10px;
-	font-size: 25px;
+	font-size: 1.56rem;
 }
 .equalTo {
-	font-size: 20px;
+	font-size: 1.25rem;
 	padding: 0 20px;
 }
 .check {
@@ -164,37 +168,29 @@ height: 35px;
 	left: 0;
 	right: 0;
 	z-index: 9999;
-	visibility: hidden;
+	display: none;
 	overflow: hidden;
+	
 }
 .thankYouPage.active{
-	visibility: visible;
+	display: block;
 }
 .page {
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100vh;
+	color: white;
 }
 
 .msgPage {
-	position: absolute;
-	background: white;
-	top: 40%;
-	left: 50%;
-	width: 40%;
-	height: 350px;
-	border-radius: 10px;
-	visibility: hidden;
-	opacity: 0;
-	transition: 0.7s ease;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
+height: 100px;
+width: 100px;	
+display: none;
 
 }
 .msgPage.active {
-	visibility: visible;
-	top: 50%;
-	opacity: 1;
-	transition: 0.7s;
+	display: block;
 }
 
 .msgPage .contain {
@@ -215,7 +211,11 @@ height: 35px;
 	transform: rotate(360deg);
 	color: red;
 }
-.thanksHeading h1 {
+
+.customer{
+	background: ghostwhite;
+}
+.headingThank h1 {
 	text-align: center;
 	padding-bottom: 20px;
 }
@@ -232,7 +232,7 @@ height: 35px;
 .optValidate input {
 	height: 35px;
 	width: 30%;
-	font-size: 18px;
+	font-size: 1.125rem;
 	margin-right: 20px;
 	padding: 5px 10px;
 	border: 1px solid;
@@ -243,17 +243,8 @@ height: 35px;
 	width: 100px;
 	background: greenyellow;
 	border: 1px solid rgb(155, 230, 43);
-	font-size: 15px;
+	font-size: 1rem;
 	border-radius: 5px;
-}
-.optValidate i{
-visibility: hidden;
-}
-.optValidate i.active{
-	visibility: visible;
-	  margin-left: 10px;
- 	 font-size: 17px;
-	 color: greenyellow;
 }
 
 .attemptCount{
@@ -273,26 +264,44 @@ color: red;
 .vData.active{
 display: block;
 }
-.main
+.con
 {
 	display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+height: 100vh;
 
 }
-.tData{
+.main{
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 50%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+padding: 40px 5%;
+border: 1px solid #9a9a9a;
+/* background: ghostwhite; */
+border-radius: 10px;
+box-shadow: 0px 0px 22px #999;
 
 }
 
-.tContent{
 
+.optValidate i{
+visibility: hidden;
+}
+.optValidate i.active{
+	visibility: visible;
+	  margin-left: 10px;
+ 	 font-size: 1.05rem;
+	 color: greenyellow;
 }
 
-
-
+.optValidate i:last-child{
+	color: black;
+	visibility: hidden;
+}
+.optValidate i:last-child.active{
+	visibility: visible;
+}

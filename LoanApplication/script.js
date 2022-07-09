@@ -7,30 +7,58 @@ var num1 = document.querySelector('.num1 span');
 var num2 = document.querySelector('.num2 span');
 var oper = document.querySelector('.oper span');
 const userData = [];
+const userHere = {};
 // console.log(userData)
-var userHere = {};
-
 let captchaAns = null;
 
 loanForm.addEventListener('submit', function (e) {
 	e.preventDefault();
 
-	// alert("submit here")
 	let name = fName();
 	let email = isEmailValid();
 	let pan = panNumber();
-	//  captchAnsw.addEventListener('change', captchaOutput);
+	let amt = amountCheck();
 	let captch = captchaOutput();
 
-	if (name && email && pan && captch) {
-		userData.push(userHere);
-		document
-			.querySelector('#submitForm')
-			.addEventListener('click', submitFormMove);
-		userInfo();
-		re();
+	if (name && email && pan && captch && amt) {
+		let myObj = JSON.stringify(userHere);
+		localStorage.setItem('userData', myObj);
+		loader();
 	}
 });
+
+function amountCheck() {
+	const amt = document.querySelector('#amount').value;
+	const error = document.querySelector('.amtError');
+	error.classList.remove('active');
+	if (amt == '') {
+		error.classList.add('active');
+		createCaptch();
+		return false;
+	}
+
+	return true;
+}
+document.querySelector('#amount').addEventListener('blur', amountCheck);
+
+const clearInputs = () => {
+	document.getElementById('fname').value = '';
+	document.getElementById('email').value = '';
+	document.getElementById('pan').value = '';
+	document.querySelector('#intword').innerText = '';
+	createCaptch();
+};
+
+const onlyChar = (txt) => {
+	{
+		var letters = /^[A-Za-z]+$/;
+		if (txt.match(letters)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+};
 
 function fName() {
 	const fname = document.getElementById('fname').value;
@@ -43,7 +71,12 @@ function fName() {
 		let fnameWords = trimmed.split(' ');
 
 		if (fnameWords.length == 2) {
-			if (fnameWords[0].length >= 4 && fnameWords[1].length >= 4) {
+			if (
+				fnameWords[0].length >= 4 &&
+				fnameWords[1].length >= 4 &&
+				onlyChar(fnameWords[0]) &&
+				onlyChar(fnameWords[1])
+			) {
 				return true;
 			}
 		}
@@ -53,6 +86,7 @@ function fName() {
 
 	return false;
 }
+document.getElementById('fname').addEventListener('blur', fName);
 //==================================
 
 // Email validation here to check
@@ -70,6 +104,7 @@ function isEmailValid() {
 	error.classList.add('active');
 	return false;
 }
+document.getElementById('email').addEventListener('blur', isEmailValid);
 //==================================
 
 // PAN Validation depending on a conditions
@@ -89,6 +124,9 @@ function panNumber() {
 	errorPan.classList.add('active');
 	return false;
 }
+document.getElementById('pan').addEventListener('blur', panNumber);
+
+// amount check empty
 
 //Code start to Integre to word conversion
 const Ones = [
@@ -127,6 +165,16 @@ const Ones = [
 		'Hundred',
 	],
 	Scale = ['', 'Thousand', 'Million', 'Billion'];
+const onlyNumber = (n) => {
+	{
+		var nn = /^[0-9]+$/;
+		if (n.match(nn)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+};
 
 const integerToWords = (n = 0) => {
 	if (n == 0) return 'Zero'; // check for zero
@@ -160,7 +208,15 @@ document.querySelector('#amount').addEventListener('keyup', function (e) {
 	let value = this.value;
 	userHere.amount = value;
 	let w = integerToWords(value);
-	document.querySelector('#intword').innerText = w;
+	const error = document.querySelector('.amtError');
+
+	error.classList.remove('active');
+
+	if (onlyNumber(value)) {
+		document.querySelector('#intword').innerText = w + ' Rs';
+	}
+
+	error.classList.add('active');
 });
 
 //==================================
@@ -187,7 +243,7 @@ const createCaptch = () => {
 	oper.innerHTML = op[rOpr];
 	num2.innerHTML = rNum2;
 
-	captchAns = validateCaptcha([rNum1, op[rOpr], rNum2]);
+	captchaAns = validateCaptcha([rNum1, op[rOpr], rNum2]);
 };
 
 // Captcha reload
@@ -216,7 +272,7 @@ function captchaOutput() {
 	errorCaptchR.classList.remove('active');
 	errorCaptchW.classList.remove('active');
 
-	if (anserByUser == captchAns) {
+	if (anserByUser == captchaAns) {
 		return true;
 	}
 	errorCaptchW.classList.add('active');
@@ -224,85 +280,32 @@ function captchaOutput() {
 	createCaptch();
 	return false;
 }
-//==================================
-
-// submit popup
-
-function submitFormMove() {
-	const popup = document.querySelector('.msgPage');
-	const blur = document.querySelector('.thankYouPage');
-
-	popup.classList.toggle('active');
-	blur.classList.toggle('active');
-}
-document.querySelector('.closeButton i').addEventListener('click', closePopup);
-function closePopup() {
-	const popup = document.querySelector('.msgPage');
-	const blur = document.querySelector('.thankYouPage');
-
-	popup.classList.remove('active');
-	blur.classList.remove('active');
-}
-const userInfo = () => {
-	const name = document.getElementById('fname').value.split(' ')[0];
-	const email = document.getElementById('email').value;
-
-	document.querySelector('#userName em').innerText = name;
-	document.querySelector('#userEmail strong').innerText = email;
-};
-//OTP generation
-const otp = () => {
-	const randomOpt =
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString();
-	return randomOpt;
-};
-var ab;
-function re() {
-	ab = otp();
-	console.log('Generated OTP :- ' + ab);
-	return ab;
-}
-
-var count = 3;
+document.getElementById('validate').addEventListener('blur', captchaOutput);
 
 //==================================
 
-// otp vaidations
-const validateOTP = () => {
-	const userInput = document.querySelector('.optValidate input').value;
-	const error = document.querySelector('.attemptCount');
-	const reload = document.querySelector('.optValidate i');
-	error.classList.remove('active');
+// reloader
 
-	if (count > 0) {
-		if (ab == userInput) {
-			reload.classList.add('active');
-			error.classList.remove('active');
-			setTimeout(() => {
-				window.location.href = ' http://pixel6.co/';
-			}, 3000);
-		} else {
-			// console.log('wrong otp');
+function loader() {
+	const ss = setInterval(() => {
+		document.querySelector('.thankYouPage').classList.add('active');
+		document.querySelector('.msgPage').classList.add('active');
+	}, 500);
+	setTimeout(() => {
+		clearInterval(ss);
+		window.location.href = 'thankyou.html';
+	}, 3000);
+}
 
-			error.classList.add('active');
-			reload.classList.remove('active');
-			document.querySelector('.attemptCount p span').innerText = count;
-			count--;
-			re();
-		}
-	} else if (count == 0) {
-		setTimeout(() => {
-			window.location.href = ' http://pixel6.co/404';
-		}, 3000);
-	}
-};
+// document.querySelector('.closeButton i').addEventListener('click', closePopup);
+// function closePopup() {
+// 	const popup = document.querySelector('.msgPage');
+// 	const blur = document.querySelector('.thankYouPage');
 
-document
-	.querySelector('.optValidate button')
-	.addEventListener('click', validateOTP);
+// 	popup.classList.remove('active');
+// 	blur.classList.remove('active');
+// }
 
+// //
 // it call on when u reload a page
 createCaptch();

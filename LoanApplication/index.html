@@ -37,6 +37,7 @@
                                 <ul>
                                     <li>Name Should be in 2 words</li>
                                     <li>Each Word length > 4</li>
+                                    <li>Only characters are allowed</li>
                                 </ul>
                             </div>
                         </div>
@@ -67,13 +68,14 @@
                     <div class="inp">
                         <div class="label"><label for="amount">Amount</label></div>
                         <div class="form-input">
-                            <input type="text"  name="amount" id="amount" pattern="[0-9]+">
+                            <input type="text" name="amount" id="amount" pattern="[0-9]+">
                         </div>
                     </div>
-                    <div class="inp">
-                        <div class="amountShow">
-                            <p id="intword"></p>
-                        </div>
+                    <div class="amtError" style="width: 65%; color:rgb(182, 10, 10);">
+                        <span>Please enter number</span>
+                    </div>
+                    <div class="amountShow">
+                        <p id="intword"></p>
                     </div>
                     <div class="inp">
                         <div class="capcha">
@@ -113,38 +115,16 @@
         </div>
     </div>
 
-    <!-- Model pop up -->
-   <div class="thankYouPage">
-    <div class="page">
-        <div class="msgPage">
-         <div class="contain">
-            <div class="closeButton">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <div class="thanksHeading">
-                <h1>Thank You !</h1>
-            </div>
-            <div class="thanksData">
-                <p id="userName">Dear <em></em>,</p>
-                <p id="userEmail">Thank you for your inquery. A 4 digit verification number has been sent to your email
-                    <strong></strong> please enter it the following box and submit for confiration
-            
-                </p>
-                <div class="optValidate">
-                    <input type="text" placeholder="Enter OTP" />
-                    <button>Validate</button> <i class="fa fa-check" aria-hidden="true"></i>
-                </div>
-                <div class="attemptCount">
-                    <p>Please enter valid OTP <span></span> left</p>
-                </div>
-               
-         </div>
-               
 
+
+    <!-- Model pop up -->
+    <div class="thankYouPage">
+        <div class="page">
+            <div class="msgPage">
+                <i class="fa fa-spinner fa-pulse fa-4x"></i>
             </div>
         </div>
     </div>
-   </div>
     <script src="script.js"></script>
 </body>
 
