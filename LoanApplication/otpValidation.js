@@ -7,10 +7,10 @@ function getRandomNum(min, max) {
 }
 const otp = () => {
 	const randomOpt =
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString() +
-		getRandomNum(0, 4).toString();
+		getRandomNum(2, 9).toString() +
+		getRandomNum(0, 10).toString() +
+		getRandomNum(0, 6).toString() +
+		getRandomNum(0, 11).toString();
 	return randomOpt;
 };
 var ab;
