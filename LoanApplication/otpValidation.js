@@ -24,7 +24,8 @@ re();
 const userInfo = () => {
 	let userData = JSON.parse(localStorage.getItem('userData'));
 	// console.log(userData);
-	document.querySelector('#userName em').innerText = userData.Name;
+	document.querySelector('#userName em').innerText =
+		userData.Name.charAt(0).toUpperCase() + userData.Name.slice(1);
 	document.querySelector('#userEmail strong').innerText = userData.email;
 };
 userInfo();
