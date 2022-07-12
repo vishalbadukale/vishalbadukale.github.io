@@ -174,7 +174,6 @@ function inWords(num) {
 	// console.log(n);
 	if (!n) return;
 	var str = [];
-	console.log(str)
 	s1 =
 		n[1] != 0
 			? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore '
@@ -194,7 +193,7 @@ function inWords(num) {
 	s5 = n[5] != 0 ? a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]] : '';
 
 	str = [s1, s2, s3, s4, s5].filter((s) => s != '');
-	// console.log(str) 
+	// console.log(str)
 
 	if (str.length > 1) {
 		str[str.length - 1] = ' and ' + str[str.length - 1];
