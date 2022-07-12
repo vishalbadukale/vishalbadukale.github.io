@@ -196,7 +196,7 @@ function inWords(num) {
 		n[5] != 0
 			? (str != '' ? 'and ' : '') +
 			  (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) +
-			  'only '
+			  'RS '
 			: '';
 	return str;
 }
@@ -212,7 +212,7 @@ document.querySelector('#amount').addEventListener('keyup', function (e) {
 	error.classList.remove('active');
 
 	if (onlyNumber(value)) {
-		document.querySelector('.amountShow span').innerText = w + ' Rs';
+		document.querySelector('.amountShow span').innerText = w;
 	}
 	if (value == '') document.querySelector('.amountShow span').innerText = '';
 	error.classList.add('active');
