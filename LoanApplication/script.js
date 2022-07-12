@@ -23,7 +23,8 @@ loanForm.addEventListener('submit', function (e) {
 	if (name && email && pan && captch && amt) {
 		let myObj = JSON.stringify(userHere);
 		localStorage.setItem('userData', myObj);
-		loader();
+		window.location.href = 'thankyou.html';
+		// loader();
 	}
 });
 
@@ -82,6 +83,7 @@ document.getElementById('fname').addEventListener('blur', fName);
 
 function isEmailValid() {
 	let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+	
 	let s = document.getElementById('email').value;
 	userHere.email = s;
 	// console.log(s)
@@ -118,42 +120,45 @@ document.getElementById('pan').addEventListener('blur', panNumber);
 // amount check empty
 
 //Code start to Integre to word conversion
-const Ones = [
-		'',
-		'One',
-		'Two',
-		'Three',
-		'Four',
-		'Five',
-		'Six',
-		'Seven',
-		'Eight',
-		'Nine',
-		'Ten',
-		'Eleven',
-		'Twelve',
-		'Thirteen',
-		'Fourteen',
-		'Fifteen',
-		'Sixteen',
-		'Seventeen',
-		'Eighteen',
-		'Nineteen',
-	],
-	Tens = [
-		'',
-		'',
-		'Twenty',
-		'Thirty',
-		'Forty',
-		'Fifty',
-		'Sixty',
-		'Seventy',
-		'Eighty',
-		'Ninety',
-		'Hundred',
-	],
-	Scale = ['', 'Thousand', 'Million', 'Billion'];
+
+const a = [
+	'',
+	'one ',
+	'two ',
+	'three ',
+	'four ',
+	'five ',
+	'six ',
+	'seven ',
+	'eight ',
+	'nine ',
+	'ten ',
+	'eleven ',
+	'twelve ',
+	'thirteen ',
+	'fourteen ',
+	'fifteen ',
+	'sixteen ',
+	'seventeen ',
+	'eighteen ',
+	'nineteen ',
+];
+const b = [
+	'',
+	'',
+	'twenty',
+	'thirty',
+	'forty',
+	'fifty',
+	'sixty',
+	'seventy',
+	'eighty',
+	'ninety',
+];
+
+
+
+
 const onlyNumber = (n) => {
 	{
 		var nn = /^[0-9]+$/;
@@ -165,46 +170,56 @@ const onlyNumber = (n) => {
 	}
 };
 
-const integerToWords = (n = 0) => {
-	if (n == 0) return 'Zero'; // check for zero
-	n = ('0'.repeat((2 * (n += '').length) % 3) + n).match(/.{3}/g); // create triplets array
-	if (n.length > Scale.length) return 'Too Large'; // check if larger than scale array
-	let out = '';
-	return (
-		n.forEach((Triplet, pos) => {
-			// loop into array for each triplet
-			if (+Triplet) {
-				out +=
-					' ' +
-					(+Triplet[0] ? Ones[+Triplet[0]] + ' ' + Tens[10] : '') +
-					' ' +
-					(+Triplet.substr(1) < 20
-						? Ones[+Triplet.substr(1)]
-						: Tens[+Triplet[1]] +
-						  (+Triplet[2] ? '-' : '') +
-						  Ones[+Triplet[2]]) +
-					' ' +
-					Scale[n.length - pos - 1];
-			}
-		}),
-		out.replace(/\s+/g, ' ').trim()
-	);
-};
+function inWords(num) {
+	if ((num = num.toString()).length > 9) return 'overflow';
+	n = ('000000000' + num)
+		.substr(-9)
+		.match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+	console.log(n);
+	if (!n) return;
+	var str = '';
+	str +=
+		n[1] != 0
+			? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore '
+			: '';
+	str +=
+		n[2] != 0
+			? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh '
+			: '';
+	str +=
+		n[3] != 0
+			? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand '
+			: '';
+	str +=
+		n[4] != 0
+			? (str != '' ? 'and ' : '') +
+			  (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) +
+			  'hundred '
+			: '';
+	str +=
+		n[5] != 0
+			? (str != '' ? 'and ' : '') +
+			  (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) +
+			  'only '
+			: '';
+	return str;
+}
 //Code ENd for Integre to word conversion
 //==================================
 
 document.querySelector('#amount').addEventListener('keyup', function (e) {
 	let value = this.value;
 	userHere.amount = value;
-	let w = integerToWords(value);
+	let w = inWords(value);
 	const error = document.querySelector('.amtError');
 
 	error.classList.remove('active');
 
 	if (onlyNumber(value)) {
-		document.querySelector('#intword').innerText = w + ' Rs';
+		document.querySelector('.amountShow span').innerText = w + ' Rs';
 	}
-
+	if (value == '')
+	document.querySelector('.amountShow span').innerText = '';
 	error.classList.add('active');
 });
 
@@ -315,3 +330,7 @@ function loader() {
 // //
 // it call on when u reload a page
 createCaptch();
+
+
+
+

@@ -68,14 +68,14 @@
                     <div class="inp">
                         <div class="label"><label for="amount">Amount</label></div>
                         <div class="form-input">
-                            <input type="text" name="amount" id="amount" pattern="[0-9]+">
+                            <input type="text" name="amount" id="amount" pattern="[0-9]+" maxlength="9">
                         </div>
                     </div>
                     <div class="amtError" style="width: 65%; color:rgb(182, 10, 10);">
                         <span>Please enter number</span>
                     </div>
                     <div class="amountShow">
-                        <p id="intword"></p>
+                        <span id="intword"></span>
                     </div>
                     <div class="inp">
                         <div class="capcha">
@@ -114,7 +114,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- Model pop up -->

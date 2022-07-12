@@ -8,9 +8,9 @@ function getRandomNum(min, max) {
 const otp = () => {
 	const randomOpt =
 		getRandomNum(2, 9).toString() +
-		getRandomNum(0, 10).toString() +
+		getRandomNum(0, 7).toString() +
 		getRandomNum(0, 6).toString() +
-		getRandomNum(0, 11).toString();
+		getRandomNum(1, 8).toString();
 	return randomOpt;
 };
 var ab;
@@ -32,7 +32,6 @@ userInfo();
 
 //OTP generation
 
-
 //==================================
 
 var count = 3;
@@ -41,41 +40,39 @@ const validateOTP = () => {
 	const userInput = document.querySelector('.optValidate input').value;
 	const error = document.querySelector('.attemptCount');
 	const checkOtp = document.querySelector('.optValidate i');
+	const load = document.querySelector('.optValidate i:last-child');
 	error.classList.remove('active');
+	if (userInput != '') {
+		if (count > 0) {
+			if (ab == userInput) {
+				checkOtp.classList.add('active');
+				error.classList.remove('active');
 
-	if (count > 0) {
-		if (ab == userInput) {
-            // otpLoader()
-			checkOtp.classList.add('active');
-			error.classList.remove('active');
-            loader()
+				setTimeout(() => {
+					window.location.href = ' http://pixel6.co/';
+				}, 2000);
+			} else {
+				error.classList.add('active');
+				checkOtp.classList.remove('active');
+
+				document.querySelector('.attemptCount p span').innerText = count;
+				count--;
+				re();
+			}
+		} else if (count == 0) {
 			setTimeout(() => {
-               
-				window.location.href = ' http://pixel6.co/';
-			}, 2000);
-		} else {
-			// console.log('wrong otp');
-
-			error.classList.add('active');
-			checkOtp.classList.remove('active');
-         
-			document.querySelector('.attemptCount p span').innerText = count;
-			count--;
-			re();
+				window.location.href = ' http://pixel6.co/404';
+			}, 1000);
 		}
-	} else if (count == 0) {
-        loader()
-		setTimeout(() => {
-            
-			window.location.href = ' http://pixel6.co/404';
-		}, 1000);
+	} else {
+		error.classList.add('active');
+		
 	}
 };
 
 document
 	.querySelector('.optValidate button')
 	.addEventListener('click', validateOTP);
-
 
 function loader() {
 	const ss = setInterval(() => {
@@ -85,16 +82,10 @@ function loader() {
 	setTimeout(() => {
 		clearInterval(ss);
 		window.location.href = 'thankyou.html';
-	}, 3000);
+	}, 2000);
 }
 
 
-// function otpLoader() {
-// 	const ss = setInterval(() => {
-		
-// 		document.querySelector('.optValidate i:last-child').classList.add('active');
-// 	}, 500);
-// 	setTimeout(() => {
-// 		clearInterval(ss);
-// 	}, 1000);
-// }
+
+
+

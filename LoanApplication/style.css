@@ -248,14 +248,16 @@ display: none;
 }
 
 .attemptCount{
-	display: none;
+	display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 color: red;
+visibility: hidden;
+height: 30px;
 } 
 .attemptCount.active{
-	display: flex;
+	visibility: visible;
 }
 .vData{
 	display: none;
