@@ -66,7 +66,6 @@ const validateOTP = () => {
 		}
 	} else {
 		error.classList.add('active');
-		
 	}
 };
 
@@ -84,8 +83,3 @@ function loader() {
 		window.location.href = 'thankyou.html';
 	}, 2000);
 }
-
-
-
-
-

@@ -28,7 +28,6 @@ loanForm.addEventListener('submit', function (e) {
 	}
 });
 
-
 document.querySelector('#amount').addEventListener('blur', amountCheck);
 
 const clearInputs = () => {
@@ -83,7 +82,7 @@ document.getElementById('fname').addEventListener('blur', fName);
 
 function isEmailValid() {
 	let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-	
+
 	let s = document.getElementById('email').value;
 	userHere.email = s;
 	// console.log(s)
@@ -156,9 +155,6 @@ const b = [
 	'ninety',
 ];
 
-
-
-
 const onlyNumber = (n) => {
 	{
 		var nn = /^[0-9]+$/;
@@ -218,8 +214,7 @@ document.querySelector('#amount').addEventListener('keyup', function (e) {
 	if (onlyNumber(value)) {
 		document.querySelector('.amountShow span').innerText = w + ' Rs';
 	}
-	if (value == '')
-	document.querySelector('.amountShow span').innerText = '';
+	if (value == '') document.querySelector('.amountShow span').innerText = '';
 	error.classList.add('active');
 });
 
@@ -239,8 +234,6 @@ function amountCheck() {
 	return true;
 }
 
-
-
 // random Number creater
 
 function getRandomNum(min, max) {
@@ -252,11 +245,10 @@ function getRandomNum(min, max) {
 }
 
 const createCaptch = () => {
-
 	let op = ['+', '*', '-'];
 
-	let rNum1 = getRandomNum(0,11);
-	let rNum2 = getRandomNum(0,10);
+	let rNum1 = getRandomNum(0, 11);
+	let rNum2 = getRandomNum(0, 10);
 
 	let rOpr = getRandomNum(0, op.length - 1);
 	num1.innerHTML = rNum1;
@@ -271,8 +263,6 @@ document.querySelector('.reloadCapcha').addEventListener('click', createCaptch);
 
 // Validate Captcha for user input
 const validateCaptcha = (captchVars) => {
-
-	
 	let [n1, op, n2] = captchVars;
 
 	switch (op) {
@@ -330,7 +320,3 @@ function loader() {
 // //
 // it call on when u reload a page
 createCaptch();
-
-
-
-

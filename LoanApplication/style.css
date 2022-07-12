@@ -4,13 +4,17 @@
 	box-sizing: border-box;
 }
 input:invalid {
-    border: 3px solid red;
+	border: 3px solid red;
 }
 .container,
 .loanApp,
 .capcha,
 .capchaData,
-.optValidate,.loanHeading,.num1,.num2,.amtError {
+.optValidate,
+.loanHeading,
+.num1,
+.num2,
+.amtError {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,11 +26,11 @@ input:invalid {
 }
 .loanApp {
 	flex-direction: column;
-background: rgb(238, 238, 238);
-width: 35%;
-height: 700px;
-border-radius: 10px;
-box-shadow: 0px 5px 15px #a0a0a0;
+	background: rgb(238, 238, 238);
+	width: 35%;
+	height: 700px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px #a0a0a0;
 }
 .loan {
 	width: 75%;
@@ -35,9 +39,9 @@ box-shadow: 0px 5px 15px #a0a0a0;
 .loanHeading {
 	padding: 20px 0;
 	height: 120px;
-width: 100%;
+	width: 100%;
 }
-.loanHeading h1{
+.loanHeading h1 {
 	text-align: center;
 }
 .inp {
@@ -76,13 +80,16 @@ width: 100%;
 	padding: 10px 20px;
 }
 .emailVal,
-.pan,.amtError {
+.pan,
+.amtError {
 	display: none;
 }
 .emailVal.active,
 .pan.active,
 .error .wrong.active,
-.error .right.active,.amtError.active,.checkInput:hover .nameDesc {
+.error .right.active,
+.amtError.active,
+.checkInput:hover .nameDesc {
 	display: block;
 }
 #pan {
@@ -100,10 +107,9 @@ width: 100%;
 }
 .amountShow {
 	display: flex;
-justify-content: end;
-align-items: center;
-height: 35px;
-	
+	justify-content: end;
+	align-items: center;
+	height: 35px;
 }
 .capcha,
 .capchaData {
@@ -114,13 +120,12 @@ height: 35px;
 	/* padding: 20px 10px; */
 	width: 35%;
 	height: 55px;
-	
 }
-.num1{
+.num1 {
 	transform: rotate(-45deg);
 	width: 30%;
 }
-.num2{
+.num2 {
 	width: 30%;
 	transform: rotate(-40deg);
 }
@@ -170,9 +175,8 @@ height: 35px;
 	z-index: 9999;
 	display: none;
 	overflow: hidden;
-	
 }
-.thankYouPage.active{
+.thankYouPage.active {
 	display: block;
 }
 .page {
@@ -184,10 +188,9 @@ height: 35px;
 }
 
 .msgPage {
-height: 100px;
-width: 100px;	
-display: none;
-
+	height: 100px;
+	width: 100px;
+	display: none;
 }
 .msgPage.active {
 	display: block;
@@ -212,7 +215,7 @@ display: none;
 	color: red;
 }
 
-.customer{
+.customer {
 	background: ghostwhite;
 }
 .headingThank h1 {
@@ -247,63 +250,59 @@ display: none;
 	border-radius: 5px;
 }
 
-.attemptCount{
+.attemptCount {
 	display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-color: red;
-visibility: hidden;
-height: 30px;
-} 
-.attemptCount.active{
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: red;
+	visibility: hidden;
+	height: 30px;
+}
+.attemptCount.active {
 	visibility: visible;
 }
-.vData{
+.vData {
 	display: none;
 	color: greenyellow;
 }
-.vData.active{
-display: block;
+.vData.active {
+	display: block;
 }
-.con
-{
+.con {
 	display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100vh;
-
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
-.main{
+.main {
 	display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 50%;
-padding: 40px 5%;
-border: 1px solid #9a9a9a;
-/* background: ghostwhite; */
-border-radius: 10px;
-box-shadow: 0px 0px 22px #999;
-
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	padding: 40px 5%;
+	border: 1px solid #9a9a9a;
+	/* background: ghostwhite; */
+	border-radius: 10px;
+	box-shadow: 0px 0px 22px #999;
 }
 
-
-.optValidate i{
-visibility: hidden;
+.optValidate i {
+	visibility: hidden;
 }
-.optValidate i.active{
+.optValidate i.active {
 	visibility: visible;
-	  margin-left: 10px;
- 	 font-size: 1.05rem;
-	 color: greenyellow;
+	margin-left: 10px;
+	font-size: 1.05rem;
+	color: greenyellow;
 }
 
-.optValidate i:last-child{
+.optValidate i:last-child {
 	color: black;
 	visibility: hidden;
 }
-.optValidate i:last-child.active{
+.optValidate i:last-child.active {
 	visibility: visible;
 }
