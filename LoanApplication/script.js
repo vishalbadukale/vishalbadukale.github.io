@@ -171,24 +171,57 @@ function inWords(num) {
 	n = ('000000000' + num)
 		.substr(-9)
 		.match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-	console.log(n);
+	// console.log(n);
 	if (!n) return;
-	var str = '';
-	str +=
+	var str = [];
+	console.log(str)
+	s1 =
 		n[1] != 0
 			? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore '
 			: '';
-	str +=
+	s2 =
 		n[2] != 0
 			? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh '
 			: '';
-	str +=
+	s3 =
 		n[3] != 0
 			? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand '
 			: '';
+	s4 =
+		n[4] != 0
+			? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred '
+			: '';
+	s5 = n[5] != 0 ? a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]] : '';
+
+	str = [s1, s2, s3, s4, s5].filter((s) => s != '');
+	console.log(str) 
+
+	if (str.length > 1) {
+		str[str.length - 1] = ' and ' + str[str.length - 1];
+		// console.log(str[str.length - 1]);
+	}
+	str = str.join('') + 'RS';
+	/*str +=
+		n[1] != 0
+			? (n[2] == 00 ? 'and ' : '') +
+			  (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) +
+			  'Crore '
+			: '';
+	str +=
+		n[2] != 0
+			? (n[3] == 00 ? 'and ' : '') +
+			  (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) +
+			  'Lakh '
+			: '';
+	str +=
+		n[3] != 0
+			? (n[4] == 00 ? 'and ' : '') +
+			  (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) +
+			  'Thousand '
+			: '';
 	str +=
 		n[4] != 0
-			? 
+			? (n[5] == 00 ? 'and ' : '') +
 			  (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) +
 			  'Hundred '
 			: '';
@@ -198,6 +231,19 @@ function inWords(num) {
 			  (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) +
 			  'RS'
 			: '';
+	
+	str = str.trim();
+	str = str.indexOf('and') === 0 ? str.replace('and', '') : str;
+	let ss = str.split(' ');
+	let count = ss.filter((s) => s.trim() == 'and').length;
+	console.log(count);
+	if (count > 1) {
+		console.log(str);
+		let st = str.split('and');
+		st[st.length - 2] = ' and';
+		str = st.join('');
+	}*/
+
 	return str;
 }
 //Code ENd for Integre to word conversion
@@ -208,6 +254,7 @@ document.querySelector('#amount').addEventListener('keyup', function (e) {
 	userHere.amount = value;
 	let w = inWords(value);
 	const error = document.querySelector('.amtError');
+	// console.log(w);
 
 	error.classList.remove('active');
 
