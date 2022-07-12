@@ -188,7 +188,7 @@ function inWords(num) {
 			: '';
 	str +=
 		n[4] != 0
-			? (str != '' ? 'and ' : '') +
+			? 
 			  (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) +
 			  'hundred '
 			: '';
