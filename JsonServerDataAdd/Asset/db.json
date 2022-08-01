@@ -1,0 +1,38 @@
+{
+  "user": [
+    {
+      "fname": "vishal",
+      "lname": "Badukale",
+      "email": "vishal@gmail.com",
+      "phone": "8888888888",
+      "pass": "vishal",
+      "id": 1
+    },
+    {
+      "fname": "Pankaj",
+      "lname": "Badukale",
+      "email": "pankaj@gmail.com",
+      "phone": "8884551220",
+      "pass": "pan123",
+      "id": 2
+    },
+    {
+      "fname": "Pooja",
+      "lname": "Badukale",
+      "email": "pooja123@gmail.com",
+      "phone": "8888888888",
+      "pass": "pooja",
+      "id": 3
+    },
+    {
+      "fname": "vaishnavi",
+      "lname": "Akotkar",
+      "email": "vaishnavi@gmail.com",
+      "phone": "8766645512",
+      "dob": "2000-07-19",
+      "city": "Shirajgaon Kasba",
+      "pass": "vaish123",
+      "id": 4
+    }
+  ]
+}
