@@ -1,0 +1,26 @@
+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
+
+react project deployy in github
+Firstly
+in ract add " npm i gh-pages --save-dev "
+
+then in the packages go and see gh-pages dependency and add other things belowe
+in 1st add " 'homepage' ='http://vishalbadukale.github.io/react-dashboard.git' "
+
+in scripts are   "predeploy":"npm run build",  and  "deploy":"gh-pages -d build"
+
+
+make repo new and inside react project " init git " and " git add . " and " git branch -M main "   
+" git remote add origin https://github.com/vishalbadukale/react-dashboard.git "
+" git push -u origin main "
+
+if any changes made before this then push and commit again
+
+
+ sudo apt install bleachbit
+sudo apt install gufw
+
+
+
+
+
