@@ -1,0 +1,399 @@
+@import 'mediaQuery';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+input:invalid {
+	border: 3px solid red;
+}
+.container,
+.loan,
+.capcha,
+.capchaData,
+.optValidate,
+.loanHeading,
+.num1,
+.num2,
+.amtError {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+.loan {
+	flex-direction: column;
+	background: rgb(238, 238, 238);
+	width: 35%;
+	height: 700px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 15px #a0a0a0;
+    
+    &Heading {
+	padding: 20px 0;
+	height: 120px;
+	width: 100%;
+    
+        h1 {
+        text-align: center;
+        @include mobile{
+                font-size: 25px;
+            }
+        }
+
+         @include mobile{
+                padding: 15px 0;
+                height: 80px;
+            }
+    }
+
+    &Data {
+	width: 75%;
+    }
+    @include mobile{
+        width: 90%;
+        height: 650px;
+        padding: 20px;
+
+        label{
+            font-size: 15px;
+            padding-bottom: 5px;
+        }
+    }
+    @include tablet{
+        width:60% ;
+        height: 800px;
+        
+        label{
+            padding-bottom: 10px;
+        }
+        .form-input{
+            margin-top: 5px;
+        }
+    }
+    @include destop{
+        width: 35%;
+        height: 700px;
+    }
+}
+
+.inp {
+	padding: 10px 0;
+
+    .form-input input {
+	height: 40px;
+	width: 100%;
+	margin-top: 5px;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding: 0 10px;
+    }
+
+}
+.checkInput.active {
+	display: flex;
+}
+.nameDesc {
+	position: absolute;
+	z-index: 1;
+	background: #ffffffb3;
+	width: 65%;
+	display: none;
+	right: 0;
+	border-radius: 5px;
+}
+.nameDesc ul {
+	width: 100%;
+	font-size: 12px;
+	list-style-position: inside;
+	padding: 10px 20px;
+}
+.emailVal,
+.pan,
+.amtError,.checkInput,.error .wrong,
+.error .right  {
+	display: none;
+}
+.emailVal.active,
+.pan.active,
+.error .wrong.active,
+.error .right.active,
+.amtError.active,
+.checkInput:hover .nameDesc {
+	display: block;
+}
+#pan {
+	text-transform: uppercase;
+}
+
+.inp button {
+	background-color: #04aa6d;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 20px;
+    @include mobile{
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+}
+.amountShow {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	height: 35px;
+
+    @include mobile{
+        font-size: 12px;
+        height: 30px;
+    }
+}
+.capcha,
+.capchaData {
+	flex-direction: row;
+}
+.capchaData {
+	background: url(https://codingnepalweb.com/demos/custom-captcha-in-javascript/captcha-bg.png);
+	width: 35%;
+	height: 55px;
+    @include mobile{
+        height: 45px;
+    }
+}
+.num1 {
+	transform: rotate(-45deg);
+	width: 30%;
+}
+.num2 {
+	width: 30%;
+	transform: rotate(-40deg);
+}
+
+.num1 span,
+.num2 span,
+.oper span {
+	font-style: italic;
+	padding: 0 10px;
+	font-size: 1.56rem;
+    @include mobile{
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+.equalTo {
+	font-size: 1.25rem;
+	padding: 0 20px;
+}
+.check {
+	width: 35%;
+}
+.reloadCapcha i {
+	padding-left: 10px;
+	cursor: pointer;
+}
+.error i {
+	font-size: 25px;
+}
+.wrong i {
+	color: red;
+    @include mobile{
+        font-size: 12px;
+    }
+}
+.right i {
+	color: greenyellow;
+}
+
+/* model pop up */
+
+.thankYouPage {
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	display: none;
+	overflow: hidden;
+}
+.thankYouPage.active {
+	display: block;
+}
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: white;
+}
+
+.msgPage {
+	height: 100px;
+	width: 100px;
+	display: none;
+}
+.msgPage.active {
+	display: block;
+}
+
+.msgPage .contain {
+	padding: 50px;
+}
+.closeButton {
+	position: absolute;
+	top: 2%;
+	right: 3%;
+	transform: translate(10%, 10%);
+}
+.closeButton i {
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: transform 0.7s ease-in-out;
+}
+.closeButton i:hover {
+	transform: rotate(360deg);
+	color: red;
+}
+
+.customer {
+	background: ghostwhite;
+}
+.headingThank h1 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+.thanksData p {
+	font-size: 1rem;
+	line-height: 1.5;
+    @include mobile{
+        font-size: 0.78rem;
+    }
+}
+.thanksData p:nth-child(2) {
+	padding: 10px 0;
+}
+.optValidate {
+	padding: 10px 0;
+}
+.optValidate input {
+	height: 35px;
+	width: 30%;
+	font-size: 1.125rem;
+	margin-right: 20px;
+	padding: 5px 10px;
+	border: 1px solid;
+	border-radius: 5px;
+   
+    @include mobile{
+        height: 30px;
+        width: 60%;
+        font-size: 1rem;
+        padding: 2px 5px;
+    }
+   
+}
+.optValidate button {
+	height: 40px;
+	width: 100px;
+	background: greenyellow;
+	border: 1px solid rgb(155, 230, 43);
+	font-size: 1rem;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgb(204, 203, 203);
+	cursor: pointer;
+
+    @include mobile{
+        height: 30px;
+        width: 80px;
+        font-size: 15px;
+    }
+}
+
+.attemptCount {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: red;
+	visibility: hidden;
+	height: 30px;
+}
+.attemptCount.active {
+	visibility: visible;
+}
+.vData {
+	display: none;
+	color: greenyellow;
+}
+.vData.active {
+	display: block;
+}
+.con {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	padding: 40px 5%;
+	border: 1px solid #9a9a9a;
+	/* background: ghostwhite; */
+	border-radius: 10px;
+	box-shadow: 0px 0px 22px #999;
+    @include mobile{
+        width: 85%;
+    }
+    @include tablet{
+        width: 60%;
+    }
+}
+@include mobile{
+    .headingThank h1{
+        font-size: 20px;
+    }
+}
+
+.optValidate i {
+	visibility: hidden;
+}
+.optValidate i.active {
+	visibility: visible;
+	margin-left: 10px;
+	font-size: 1.05rem;
+	color: greenyellow;
+}
+
+.optValidate i:last-child {
+	color: black;
+	visibility: hidden;
+}
+.optValidate i:last-child.active {
+	visibility: visible;
+}
+@include mobile {
+    .inputError{
+        font-size: 12px;
+        padding-top: 5px;
+
+    }
+}
+@include tablet{
+    .inputError{
+        padding-top: 8px;
+
+    }
+}
