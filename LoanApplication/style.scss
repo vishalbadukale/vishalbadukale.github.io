@@ -52,7 +52,7 @@ input:invalid {
     }
 
     &Data {
-	width: 75%;
+	padding: 0 60px;
     }
     @include mobile{
         width: 90%;
